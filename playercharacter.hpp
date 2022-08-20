@@ -1,6 +1,5 @@
 #pragma once
 #include <cstdint>
-#include <memory>
 #include "class.hpp"
 #include "macros.hpp"
 
@@ -49,7 +48,22 @@ class PlayerCharacter {
  
 };
 
-CHARACTERCLASS(Warrior, 20, 6, 2, 4);
-CHARACTERCLASS(Rogue, 10, 3, 1, 8);
-CHARACTERCLASS(Wizard, 8, 2, 8, 2);
-CHARACTERCLASS(Cleric, 16, 5, 5, 2);
+//CHARACTERCLASS(Warrior, 20, 6, 2, 4);
+//CHARACTERCLASS(Rogue, 10, 3, 1, 8);
+//CHARACTERCLASS(Wizard, 8, 2, 8, 2);
+//CHARACTERCLASS(Cleric, 16, 5, 5, 2);
+
+class Cleric : public Class { 
+    public:
+        Cleric() { 
+                SETHPANDSTATS;
+                MP.setMax(BASEMP);
+                MP.setVal(BASEMP); 
+            } 
+        void levelUp() override { LEVELUP; }
+    private:
+        BASESTATS(16, 5, 5, 2);
+        static const uint16_t BASEMP = 16;
+
+        PointPool MP;
+};

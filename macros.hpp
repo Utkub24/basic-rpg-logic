@@ -19,3 +19,13 @@ class classname : public Class { \
         static const uint16_t BASEDEX = basedex;\
 }
 
+#define SETHPANDSTATS \
+HP.setMax(BASEHP);\
+HP.setVal(BASEHP);\
+setStats(BASESTR, BASEINT, BASEDEX)
+
+#define BASESTATS(basehp, basestr, baseint, basedex) \
+static const uint16_t BASEHP = basehp;\
+static const uint16_t BASESTR = basestr;\
+static const uint16_t BASEINT = baseint;\
+static const uint16_t BASEDEX = basedex
