@@ -11,7 +11,12 @@ int main() {
     << "-Physical Armor: " << mister.getClass()->PhysArmor << std::endl
     << "-Magical Armor: " << mister.getClass()->MagicArmor << std::endl
     << "-Level: " << mister.getCurrentLevel() << std::endl
-    << "-Exp: " << mister.getCurrentExp() << "/" << mister.getExpForNextLevel() << std::endl;
+    << "-Exp: " << mister.getCurrentExp() << "/" << mister.getExpForNextLevel() << std::endl
+    << "Abilities: " << std::endl;
+    for(auto& ability : mister.getClass()->Abilites) {
+        std::cout << "-" << ability.name << std::endl;
+    }
+
 
     mister.gainExp(567);
     std::cout << "Mister's stats: " << std::endl
@@ -22,7 +27,12 @@ int main() {
     << "-Physical Armor: " << mister.getClass()->PhysArmor << std::endl
     << "-Magical Armor: " << mister.getClass()->MagicArmor << std::endl
     << "-Level: " << mister.getCurrentLevel() << std::endl
-    << "-Exp: " << mister.getCurrentExp() << "/" << mister.getExpForNextLevel() << std::endl;
+    << "-Exp: " << mister.getCurrentExp() << "/" << mister.getExpForNextLevel() << std::endl
+    << "Abilities: " << std::endl;
+    for(auto& ability : mister.getClass()->Abilites) {
+        std::cout << "-" << ability.name << std::endl;
+    }
+
 
     return 0;
 }
