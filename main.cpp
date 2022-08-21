@@ -2,7 +2,7 @@
 #include "playercharacter.hpp"
 
 int main() {
-    PlayerCharacter mister(new Wizard());
+    PlayerCharacter mister(new Cleric());
     std::cout << "Mister's stats: " << std::endl
     << "-HP: " << mister.getCurrentHp() << "/" << mister.getMaxHp() << std::endl
     << "-Strength: " << mister.getClass()->Str << std::endl

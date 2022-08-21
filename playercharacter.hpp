@@ -1,7 +1,9 @@
 #pragma once
 #include <cstdint>
+#include <vector>
 #include "class.hpp"
 #include "macros.hpp"
+#include "abilty.hpp"
 
 class PlayerCharacter {
     public:
