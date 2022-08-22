@@ -1,6 +1,7 @@
 #pragma once
 #include "pointpool.hpp"
 #include "statblock.hpp"
+#include "ability.hpp"
 #include <memory>
 
 class Class : public StatBlock {

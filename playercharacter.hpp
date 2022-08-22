@@ -4,49 +4,42 @@
 #include "class.hpp"
 #include "macros.hpp"
 #include "ability.hpp"
+#include "levelsystem.hpp"
 
 class PlayerCharacter {
     public:
         PlayerCharacter() = delete;
-        PlayerCharacter(Class* p_class)
-            : level(1), exp(0), nextLevelLimit(EXPTO2), playerClass(p_class) {} 
-        ~PlayerCharacter() { playerClass = nullptr; }
-
-        void checkLevel() {
-            while(exp >= nextLevelLimit) {
-                level++;
-                playerClass->levelUp();
-                incLevelLimit();
-            }
-        }
-
-        void gainExp(uint32_t i_exp) {
-            exp += i_exp;
-            checkLevel();
-        }
-
-        uint16_t getCurrentLevel() { return level; }
-        uint32_t getCurrentExp() { return exp; }
-        uint32_t getExpForNextLevel() { return nextLevelLimit; }
+        PlayerCharacter(Class* a_class)
+            : playerClass(a_class), playerLevel(new LevelSystem()) {} 
+        ~PlayerCharacter() { playerClass = nullptr; playerLevel = nullptr; }
 
         uint16_t getMaxHp() { return playerClass->HP.getMax(); }
         uint16_t getCurrentHp() { return playerClass->HP.getCurrent(); }
+        uint16_t getCurrentLevel() { return playerLevel->get(); }
+        uint32_t getCurrentExp() { return playerLevel->getCurrentExp(); }
+        uint32_t getExpForNextLevel() { return playerLevel->getExpForNextLevel(); }
+        void gainExp(uint32_t i_exp ) { 
+            playerLevel->gainExp(i_exp);
+            checkLevel();
+        }
         
+        void checkLevel() {
+            while (playerLevel->getCurrentExp() >= playerLevel->getExpForNextLevel()) {
+                playerLevel->set(playerLevel->get() + 1);
+                playerClass->levelUp();
+                playerLevel->incLevelLimit();
+            }
+        }
+
         // Either use a normal ptr to access stats directly
         // or use a unique ptr and make getters for stats
         Class* getClass() { return playerClass; }
 
-   protected:
-        uint16_t level;
-        uint32_t exp;  
-        uint32_t nextLevelLimit;
-        Class* playerClass;
+    protected:
+       Class* playerClass;
+       LevelSystem* playerLevel;
 
     private:
-        static const uint16_t EXPMULTIPLIER = 2;
-        static const uint32_t EXPTO2 = 100;
-        void incLevelLimit() { nextLevelLimit *= EXPMULTIPLIER; }
-
  
 };
 

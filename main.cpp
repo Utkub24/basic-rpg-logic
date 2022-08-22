@@ -1,5 +1,6 @@
 #include <iostream>
 #include "playercharacter.hpp"
+#include "cleric.hpp"
 
 int main() {
     PlayerCharacter mister(new Cleric());
