@@ -26,7 +26,7 @@ class PlayerCharacter {
         void checkLevel() {
             while (playerLevel->getCurrentExp() >= playerLevel->getExpForNextLevel()) {
                 playerLevel->set(playerLevel->get() + 1);
-                playerClass->levelUp();
+                playerClass->levelUp(playerLevel);
                 playerLevel->incLevelLimit();
             }
         }
