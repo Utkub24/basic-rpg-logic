@@ -3,7 +3,7 @@
 #include <vector>
 #include "class.hpp"
 #include "macros.hpp"
-#include "abilty.hpp"
+#include "ability.hpp"
 
 class PlayerCharacter {
     public:
@@ -50,11 +50,6 @@ class PlayerCharacter {
  
 };
 
-//CHARACTERCLASS(Warrior, 20, 6, 2, 4);
-//CHARACTERCLASS(Rogue, 10, 3, 1, 8);
-//CHARACTERCLASS(Wizard, 8, 2, 8, 2);
-//CHARACTERCLASS(Cleric, 16, 5, 5, 2);
-
 /*
 Have 3 starting abilities
 Get a new ability each level up to level 8 (Total of 10 with starter abilities)
@@ -89,20 +84,8 @@ levelUp(level);
 ...
 
 But how do you store these "mechanisms" in an array???????
+And wtf are these "mechanisms", blocks of text ?
+
+maybe switch statements are the way to go
 
 */
-
-class Cleric : public Class { 
-    public:
-        Cleric() { 
-                SETHPANDSTATS;
-                MP.setMax(BASEMP);
-                MP.setVal(BASEMP); 
-            } 
-        void levelUp() override { LEVELUP; }
-    private:
-        BASESTATS(16, 5, 5, 2);
-        static const uint16_t BASEMP = 16;
-
-        PointPool MP;
-};
