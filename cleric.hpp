@@ -8,7 +8,7 @@
 static const std::map<std::string, Ability> ClericAbilites {
      {"Heal", Ability("Heal", 10, 4, 6, ABILITYTYPE::HEAL, ABILITYTARGET::ALLY, ABILITYSCALER::INT)},
      {"Smite", Ability("Smite", 6, 3, 5, ABILITYTYPE::TRUEDMG, ABILITYTARGET::ENEMY, ABILITYSCALER::STR)},
-     {"Heal Self", Ability("Heal Self", 10, 4, 6, ABILITYTYPE::HEAL, ABILITYTARGET::SELF, ABILITYSCALER::STR)}
+     {"Heal Self", Ability("Heal Self", 10, 4, 6, ABILITYTYPE::HEAL, ABILITYTARGET::SELF, ABILITYSCALER::INT)}
 };
 
 class Cleric : public Class { 
@@ -22,7 +22,7 @@ class Cleric : public Class {
             } 
         void levelUp(LevelSystem* levelsys) override { 
             LEVELUP;
-            switch (levelsys->get()) {
+            switch(levelsys->get()) {
                 case 2:
                     Abilites.push_back(ClericAbilites.at("Heal Self"));
                     break;

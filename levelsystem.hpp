@@ -8,6 +8,7 @@ class LevelSystem {
 
         uint16_t get() { return level; }
         void set(uint16_t n_lvl) { level = n_lvl; }
+        void incLevel(uint16_t i_lvl = 1) { level += i_lvl; }
 
         uint32_t getCurrentExp() { return exp; }
         void gainExp(uint32_t i_exp) { exp += i_exp; }
