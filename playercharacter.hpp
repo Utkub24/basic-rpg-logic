@@ -47,6 +47,7 @@ class PlayerCharacter {
         // Either use a normal ptr to access stats directly
         // or use a unique ptr and make getters for stats
         Class* getClass() { return playerClass; }
+        std::vector<Effect> getEffects() { return Effects; }
 
     private:
         Class* playerClass;

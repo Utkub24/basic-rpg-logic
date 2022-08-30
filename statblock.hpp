@@ -17,10 +17,12 @@ class StatBlock {
             Dex = n_dex;
         }
 
-        void incStats(int i_str = 0, int i_int = 0, int i_dex = 0) {
+        void incStats(int i_str = 0, int i_int = 0, int i_dex = 0, int i_physarm = 0, int i_magarm = 0) {
             Str += i_str;
             Int += i_int;
             Dex += i_dex;
+            PhysArmor += i_physarm;
+            MagicArmor += i_magarm;
         }
 
     private:

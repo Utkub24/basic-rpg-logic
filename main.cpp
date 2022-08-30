@@ -17,7 +17,13 @@ int main() {
     for(auto& ability : mister.getClass()->Abilites) {
         std::cout << "-" << ability.name << std::endl;
     }
+    std::cout << "Effects: " << std::endl;
+    for(auto& e: mister.getEffects()) {
+        std::cout << "-" << e.name << std::endl;
+    }
 
+    Effect stony("Stone Shield", 1, 0, 0, 0, 10, 0);
+    mister.applyEffect(stony);
 
     mister.gainExp(567);
     std::cout << "Mister's stats: " << std::endl
@@ -33,6 +39,11 @@ int main() {
     for(auto& ability : mister.getClass()->Abilites) {
         std::cout << "-" << ability.name << std::endl;
     }
+    std::cout << "Effects: " << std::endl;
+    for(auto& e: mister.getEffects()) {
+        std::cout << "-" << e.name << std::endl;
+    }
+
 
 
     return 0;
