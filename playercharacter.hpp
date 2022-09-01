@@ -6,13 +6,29 @@
 #include "ability.hpp"
 #include "levelsystem.hpp"
 #include "effect.hpp"
+#include "equipment.hpp"
 
 class PlayerCharacter {
     public:
         PlayerCharacter() = delete;
         PlayerCharacter(Class* a_class)
-            : playerClass(a_class), playerLevel(new LevelSystem()) {} 
-        ~PlayerCharacter() { playerClass = nullptr; playerLevel = nullptr; }
+            : playerClass(a_class), playerLevel(new LevelSystem()) {
+                for(int i = 0; i < (int)ARMORSLOT::NUM_SLOTS; i++) { Armors[i] = nullptr; }
+                for(int i = 0; i < 2; i++) { Weapons[i] = nullptr; }
+            } 
+        ~PlayerCharacter() {
+            delete playerClass;    
+            playerClass = nullptr; 
+            delete playerLevel;
+            playerLevel = nullptr;
+
+            for(int i = 0; i < (int)ARMORSLOT::NUM_SLOTS; i++) {
+                if(Armors[i]) { delete Armors[i]; Armors[i] = nullptr; }
+            }
+            for(int i = 0; i < 2; i++) {
+                if(Weapons[i]) { delete Weapons[i]; Weapons[i] = nullptr; }
+            }
+        }
 
         uint16_t getMaxHp() { return playerClass->HP.getMax(); }
         uint16_t getCurrentHp() { return playerClass->HP.getCurrent(); }
@@ -40,9 +56,50 @@ class PlayerCharacter {
                 }
             }
             Effects.push_back(e);
-            playerClass->incStats(e.strEff, e.intEff, e.dexEff);
+            playerClass->incStats(e.strEff, e.intEff, e.dexEff, e.physArmEff, e.magicArmEff);
         }
 
+        // don't destroy item once inventory is added
+        bool equip(Equipment* eq) {
+            Armor* armor = dynamic_cast<Armor*>(eq);
+            if(armor) {
+                unsigned long long slot_num = (unsigned long long)armor->slot;
+                if(Armors[slot_num]) {
+                    *this->playerClass -= Armors[slot_num]->stats;
+                    delete Armors[slot_num];
+                    Armors[slot_num] = nullptr;
+
+                    Armors[slot_num] = armor;
+                    *this->playerClass += armor->stats;
+                } else {
+                    Armors[slot_num] = armor;
+                    *this->playerClass += armor->stats;
+                }
+                return true;
+            }
+
+            Weapon* weapon = dynamic_cast<Weapon*>(eq);
+            if(weapon) {
+                unsigned long long slot_num = (unsigned long long)weapon->slot;
+                if(Weapons[slot_num]) {
+                    *this->playerClass -= Weapons[slot_num]->stats; 
+                    delete Weapons[slot_num];
+                    Weapons[slot_num] = nullptr;
+
+                    *this->playerClass += weapon->stats;
+                    Weapons[slot_num] = weapon;
+                } else {
+                    Weapons[slot_num] = weapon;
+                    *this->playerClass += weapon->stats;
+                }
+                return true;
+            }
+
+            return false;
+        }
+
+        const Equipment* getEquippedArmorAt(unsigned long long i) { return dynamic_cast<Armor*>(Armors[i]); }
+        const Equipment* getEquippedWeaponAt(unsigned long long i) { return dynamic_cast<Weapon*>(Weapons[i]); }
 
         // Either use a normal ptr to access stats directly
         // or use a unique ptr and make getters for stats
@@ -53,4 +110,6 @@ class PlayerCharacter {
         Class* playerClass;
         LevelSystem* playerLevel;
         std::vector<Effect> Effects;
+        Equipment* Armors[(unsigned long long)ARMORSLOT::NUM_SLOTS];
+        Equipment* Weapons[2];
 };
