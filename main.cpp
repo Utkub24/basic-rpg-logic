@@ -1,5 +1,6 @@
 #include <iostream>
 #include "playercharacter.hpp"
+#include "item_manager.hpp"
 #include "cleric.hpp"
 
 int main() {
@@ -44,10 +45,10 @@ int main() {
     Effect stony("Stone Shield", 1, 0, 0, 0, 10, 0);
     mister.applyEffect(stony);
 
-    Weapon* IronSword = new Weapon("Iron Sword", StatBlock(), 3, 6, WEAPONSLOT::ONEHAND, WEAPONTYPE::MELEE );
+    Item* IronSword = ItemManager::CreateWeapon("Iron Sword", StatBlock(), 3, 6, WEAPONSLOT::ONEHAND, WEAPONTYPE::MELEE);
     mister.equip(IronSword);
 
-    Armor* PlateMail = new Armor("Plate Mail", StatBlock(0, 0, 0, 6, 0), ARMORSLOT::CHEST);
+    Item* PlateMail = ItemManager::CreateArmor("Plate Mail", StatBlock(0, 0, 0, 6, 0), ARMORSLOT::CHEST);
     mister.equip(PlateMail);
 
     mister.gainExp(567);

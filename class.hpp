@@ -8,6 +8,7 @@
 class Class : public StatBlock {
     public:
         virtual void levelUp(LevelSystem* levelsys) = 0;
+        virtual ~Class() {}
 
         PointPool HP;
         std::vector<Ability> Abilites;

@@ -6,13 +6,13 @@ enum class ABILITYTYPE { NONE, HEAL, TRUEDMG, PHYSDMG, MAGICDMG};
 enum class ABILITYSCALER { NONE, STR, INT, DEX };
 
 struct Ability {
-    Ability(std::string a_name, uint16_t a_cost, uint16_t a_cd, uint16_t a_val, ABILITYTYPE a_type, ABILITYTARGET a_target, ABILITYSCALER a_scaler)
+    Ability(std::string a_name = "unnamed", uint16_t a_cost = 0, uint16_t a_cd = 1, uint16_t a_val = 0, ABILITYTYPE a_type = ABILITYTYPE::NONE, ABILITYTARGET a_target = ABILITYTARGET::NONE, ABILITYSCALER a_scaler = ABILITYSCALER::NONE)
         : name(a_name), cost(a_cost), cooldown(a_cd), effectVal(a_val), abilityType(a_type), target(a_target), scaler(a_scaler) {}
-    std::string name = "unnamed";
-    uint16_t cost = 0;
-    uint16_t cooldown = 1; // number of turns
-    uint16_t effectVal = 0;
-    ABILITYTARGET target = ABILITYTARGET::NONE;
-    ABILITYTYPE abilityType = ABILITYTYPE::NONE;
-    ABILITYSCALER scaler = ABILITYSCALER::NONE;
+    std::string name;
+    uint16_t cost;
+    uint16_t cooldown; // number of turns
+    uint16_t effectVal;
+    ABILITYTYPE abilityType;
+    ABILITYTARGET target;
+    ABILITYSCALER scaler;
 };

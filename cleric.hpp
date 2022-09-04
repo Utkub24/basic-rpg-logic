@@ -31,6 +31,7 @@ class Cleric : public Class {
                     break;
             }
         }
+        ~Cleric() override {}
     private:
         BASESTATS(16, 5, 5, 2);
         static const uint16_t BASEMP = 16;

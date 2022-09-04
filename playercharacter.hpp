@@ -6,7 +6,7 @@
 #include "ability.hpp"
 #include "levelsystem.hpp"
 #include "effect.hpp"
-#include "equipment.hpp"
+#include "item.hpp"
 
 class PlayerCharacter {
     public:
@@ -60,8 +60,11 @@ class PlayerCharacter {
         }
 
         // don't destroy item once inventory is added
-        bool equip(Equipment* eq) {
-            Armor* armor = dynamic_cast<Armor*>(eq);
+        bool equip(Item* e_item) {
+            if(!e_item || !e_item->getData())
+                return false;
+
+            Armor* armor = dynamic_cast<Armor*>(e_item->_data);
             if(armor) {
                 unsigned long long slot_num = (unsigned long long)armor->slot;
                 if(Armors[slot_num]) {
@@ -78,7 +81,7 @@ class PlayerCharacter {
                 return true;
             }
 
-            Weapon* weapon = dynamic_cast<Weapon*>(eq);
+            Weapon* weapon = dynamic_cast<Weapon*>(e_item->_data);
             if(weapon) {
                 unsigned long long slot_num = (unsigned long long)weapon->slot;
                 if(Weapons[slot_num]) {
@@ -98,8 +101,8 @@ class PlayerCharacter {
             return false;
         }
 
-        const Equipment* getEquippedArmorAt(unsigned long long i) { return dynamic_cast<Armor*>(Armors[i]); }
-        const Equipment* getEquippedWeaponAt(unsigned long long i) { return dynamic_cast<Weapon*>(Weapons[i]); }
+        const EquipmentDelegate* getEquippedArmorAt(unsigned long long i) { return dynamic_cast<Armor*>(Armors[i]); }
+        const EquipmentDelegate* getEquippedWeaponAt(unsigned long long i) { return dynamic_cast<Weapon*>(Weapons[i]); }
 
         // Either use a normal ptr to access stats directly
         // or use a unique ptr and make getters for stats
@@ -110,6 +113,6 @@ class PlayerCharacter {
         Class* playerClass;
         LevelSystem* playerLevel;
         std::vector<Effect> Effects;
-        Equipment* Armors[(unsigned long long)ARMORSLOT::NUM_SLOTS];
-        Equipment* Weapons[2];
+        EquipmentDelegate* Armors[(unsigned long long)ARMORSLOT::NUM_SLOTS];
+        EquipmentDelegate* Weapons[2];
 };
