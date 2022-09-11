@@ -20,7 +20,7 @@ int main() {
     }
     std::cout << "Effects: " << std::endl;
     for(auto& e : mister.getEffects()) {
-        std::cout << "-" << e.name << std::endl;
+        std::cout << "-" << e.name << " (" << e.duration << ")" << std::endl;
     }
 
     std::cout << "Equipped Armors: " << std::endl;
@@ -43,13 +43,20 @@ int main() {
 
 
     Effect stony("Stone Shield", 1, 0, 0, 0, 10, 0);
-    mister.applyEffect(stony);
 
     Item* IronSword = ItemManager::CreateWeapon("Iron Sword", StatBlock(), 3, 6, WEAPONSLOT::ONEHAND, WEAPONTYPE::MELEE);
     mister.equip(IronSword);
 
     Item* PlateMail = ItemManager::CreateArmor("Plate Mail", StatBlock(0, 0, 0, 6, 0), ARMORSLOT::CHEST);
     mister.equip(PlateMail);
+
+    Effect* FireHands = new Effect("Fire Hands", 2, 3, 0, -1, 0, 0);
+    Item* FireHandsPot = ItemManager::CreatePotion("Fiery Hands Potion", FireHands, 1);
+    if(mister.use(FireHandsPot)) {
+        std::cout << "Fiery Hands Potion used. " << std::endl;
+    } else {
+        std::cout << "Fire Hands Potion not used!!" << std::endl;
+    }
 
     mister.gainExp(567);
     std::cout << "Mister's stats: " << std::endl
@@ -68,7 +75,7 @@ int main() {
 
     std::cout << "Effects: " << std::endl;
     for(auto& e : mister.getEffects()) {
-        std::cout << "-" << e.name << std::endl;
+        std::cout << "-" << e.name << " (" << e.duration << ")" << std::endl;
     }
 
     std::cout << "Equipped Armors: " << std::endl;

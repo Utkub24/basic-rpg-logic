@@ -48,15 +48,15 @@ class PlayerCharacter {
             }
         }
 
-        void applyEffect(Effect e) {
+        void applyEffect(Effect* e) {
             for(auto& effect : Effects) {
-                if(e.name == effect.name) {
-                    effect.duration = e.duration;
+                if(e->name == effect.name) {
+                    effect.duration = e->duration;
                     return;
                 }
             }
-            Effects.push_back(e);
-            playerClass->incStats(e.strEff, e.intEff, e.dexEff, e.physArmEff, e.magicArmEff);
+            Effects.push_back(*e);
+            playerClass->incStats(e->strEff, e->intEff, e->dexEff, e->physArmEff, e->magicArmEff);
         }
 
         // don't destroy item once inventory is added
@@ -95,6 +95,24 @@ class PlayerCharacter {
                     Weapons[slot_num] = weapon;
                     *this->playerClass += weapon->stats;
                 }
+                return true;
+            }
+
+            return false;
+        }
+
+        bool use(Item* u_item) {
+            if(u_item && u_item->getData() && u_item->_data->isConsumable) {
+                Potion* pot = dynamic_cast<Potion*>(u_item->_data);
+                if(pot && pot->effect) { applyEffect(pot->effect); }
+
+                if(u_item->_data->quantity == 1) {
+                    delete u_item;
+                    u_item = nullptr;
+                } else {
+                    u_item->_data->quantity--;
+                }
+
                 return true;
             }
 

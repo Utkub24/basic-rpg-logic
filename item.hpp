@@ -2,23 +2,47 @@
 #include <string>
 #include "statblock.hpp"
 #include <typeinfo>
+#include "effect.hpp"
 
 class ItemDelegate {
     public:
         std::string name;
+        bool isConsumable;
+        bool isStackable;
+        uint16_t quantity;
         virtual const char* getType() = 0;
         virtual ~ItemDelegate() {}
     protected:
-        ItemDelegate(std::string name)
-            : name(name) {} 
+        ItemDelegate(std::string name, bool isConsumable = false, bool isStackable = false, uint16_t quantity = 1)
+            : name(name), isConsumable(isConsumable), isStackable(isStackable), quantity(quantity) { if(quantity == 0) this->quantity = 1; } 
+};
+
+class Potion : public ItemDelegate {
+    public:
+        Effect* effect;
+        const char* getType() override {return typeid(*this).name(); }
+
+        ~Potion() {
+            if(effect) {
+                delete effect;
+                effect = nullptr;
+            }
+        }
+    private:
+        Potion(std::string name, Effect* effect, uint16_t quantity = 1)
+         :  ItemDelegate(name, true, true, quantity), effect(effect) {}
+
+        friend class ItemManager;
 };
 
 class Item {
     public:
         const ItemDelegate* getData() { return _data; }
         ~Item() {
-            delete _data;
-            _data = nullptr;
+            if(_data) {
+                delete _data;
+                _data = nullptr;
+            }
         }
     private:
         ItemDelegate* _data;
@@ -27,10 +51,6 @@ class Item {
         friend class ItemManager;
         friend class PlayerCharacter;
 };
-
-
-
-
 
 class EquipmentDelegate : public ItemDelegate {
     public:

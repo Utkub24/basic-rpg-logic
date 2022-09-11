@@ -13,8 +13,9 @@ class ItemManager {
             return temp_item;
         }
 
-        static Item* CreatePotion(std::string name, Effect* effect) {
-
+        static Item* CreatePotion(std::string name, Effect* effect, uint16_t quantity) {
+            Item* temp_item = new Item(new Potion(name, effect, quantity));
+            return temp_item;
         }
 
 
