@@ -41,22 +41,34 @@ int main() {
         }
     }
 
+    std::cout << "Inventory: " << std::endl;
+    for(auto i : mister.getInventoryList()) {
+        std::cout << *i;
+    }
 
-    Effect stony("Stone Shield", 1, 0, 0, 0, 10, 0);
 
     Item* IronSword = ItemManager::CreateWeapon("Iron Sword", StatBlock(), 3, 6, WEAPONSLOT::ONEHAND, WEAPONTYPE::MELEE);
-    mister.equip(IronSword);
-
     Item* PlateMail = ItemManager::CreateArmor("Plate Mail", StatBlock(0, 0, 0, 6, 0), ARMORSLOT::CHEST);
-    mister.equip(PlateMail);
+    Item* LeatherArmor = ItemManager::CreateArmor("Leather Armor", StatBlock(0, 0, 0, 2, 0), ARMORSLOT::CHEST);
 
     Effect* FireHands = new Effect("Fire Hands", 2, 3, 0, -1, 0, 0);
     Item* FireHandsPot = ItemManager::CreatePotion("Fiery Hands Potion", FireHands, 1);
-    if(mister.use(FireHandsPot)) {
-        std::cout << "Fiery Hands Potion used. " << std::endl;
-    } else {
-        std::cout << "Fire Hands Potion not used!!" << std::endl;
+
+    ItemManager::MoveToInventory(IronSword, &mister);
+    ItemManager::MoveToInventory(PlateMail, &mister);
+    ItemManager::MoveToInventory(LeatherArmor, &mister);
+    ItemManager::MoveToInventory(FireHandsPot, &mister);
+    std::cout << "Inventory: " << std::endl;
+    for(auto i : mister.getInventoryList()) {
+        std::cout << *i;
     }
+
+
+    ItemManager::Equip(IronSword, &mister);
+    ItemManager::Equip(PlateMail, &mister);
+    ItemManager::Use(FireHandsPot, &mister);
+    ItemManager::Equip(LeatherArmor, &mister);
+
 
     mister.gainExp(567);
     std::cout << "Mister's stats: " << std::endl
@@ -95,6 +107,15 @@ int main() {
             std:: cout << "-None" << std::endl;
         }
     }
+    std::cout << "Inventory: " << std::endl;
+    for(auto i : mister.getInventoryList()) {
+        std::cout << *i;
+    }
+
+
+    std::cout << "\n----END----\n\n";
+
+
 
     return 0;
 }

@@ -7,6 +7,7 @@
 #include "levelsystem.hpp"
 #include "effect.hpp"
 #include "item.hpp"
+#include <algorithm>
 
 class PlayerCharacter {
     public:
@@ -30,11 +31,11 @@ class PlayerCharacter {
             }
         }
 
-        uint16_t getMaxHp() { return playerClass->HP.getMax(); }
-        uint16_t getCurrentHp() { return playerClass->HP.getCurrent(); }
-        uint16_t getCurrentLevel() { return playerLevel->get(); }
-        uint32_t getCurrentExp() { return playerLevel->getCurrentExp(); }
-        uint32_t getExpForNextLevel() { return playerLevel->getExpForNextLevel(); }
+        uint16_t getMaxHp() const { return playerClass->HP.getMax(); }
+        uint16_t getCurrentHp()  const { return playerClass->HP.getCurrent(); }
+        uint16_t getCurrentLevel() const { return playerLevel->get(); }
+        uint32_t getCurrentExp() const { return playerLevel->getCurrentExp(); }
+        uint32_t getExpForNextLevel() const { return playerLevel->getExpForNextLevel(); }
         void gainExp(uint32_t i_exp ) { 
             playerLevel->gainExp(i_exp);
             checkLevel();
@@ -59,78 +60,38 @@ class PlayerCharacter {
             playerClass->incStats(e->strEff, e->intEff, e->dexEff, e->physArmEff, e->magicArmEff);
         }
 
-        // don't destroy item once inventory is added
-        bool equip(Item* e_item) {
-            if(!e_item || !e_item->getData())
-                return false;
 
-            Armor* armor = dynamic_cast<Armor*>(e_item->_data);
-            if(armor) {
-                unsigned long long slot_num = (unsigned long long)armor->slot;
-                if(Armors[slot_num]) {
-                    *this->playerClass -= Armors[slot_num]->stats;
-                    delete Armors[slot_num];
-                    Armors[slot_num] = nullptr;
+      
 
-                    Armors[slot_num] = armor;
-                    *this->playerClass += armor->stats;
-                } else {
-                    Armors[slot_num] = armor;
-                    *this->playerClass += armor->stats;
-                }
-                return true;
-            }
-
-            Weapon* weapon = dynamic_cast<Weapon*>(e_item->_data);
-            if(weapon) {
-                unsigned long long slot_num = (unsigned long long)weapon->slot;
-                if(Weapons[slot_num]) {
-                    *this->playerClass -= Weapons[slot_num]->stats; 
-                    delete Weapons[slot_num];
-                    Weapons[slot_num] = nullptr;
-
-                    *this->playerClass += weapon->stats;
-                    Weapons[slot_num] = weapon;
-                } else {
-                    Weapons[slot_num] = weapon;
-                    *this->playerClass += weapon->stats;
-                }
-                return true;
-            }
-
-            return false;
+        const Armor* getEquippedArmorAt(unsigned long long i) const {
+            if(!Armors[i]) return nullptr;
+            return dynamic_cast<const Armor*>(Armors[i]->getData());
         }
-
-        bool use(Item* u_item) {
-            if(u_item && u_item->getData() && u_item->_data->isConsumable) {
-                Potion* pot = dynamic_cast<Potion*>(u_item->_data);
-                if(pot && pot->effect) { applyEffect(pot->effect); }
-
-                if(u_item->_data->quantity == 1) {
-                    delete u_item;
-                    u_item = nullptr;
-                } else {
-                    u_item->_data->quantity--;
-                }
-
-                return true;
-            }
-
-            return false;
+        const Weapon* getEquippedWeaponAt(unsigned long long i) const {
+            if(!Weapons[i]) return nullptr;
+            return dynamic_cast<const Weapon*>(Weapons[i]->getData());
         }
-
-        const EquipmentDelegate* getEquippedArmorAt(unsigned long long i) { return dynamic_cast<Armor*>(Armors[i]); }
-        const EquipmentDelegate* getEquippedWeaponAt(unsigned long long i) { return dynamic_cast<Weapon*>(Weapons[i]); }
 
         // Either use a normal ptr to access stats directly
         // or use a unique ptr and make getters for stats
-        Class* getClass() { return playerClass; }
-        std::vector<Effect> getEffects() { return Effects; }
+        const Class* getClass() const { return playerClass; }
+        const std::vector<Effect> getEffects() const { return Effects; }
+        const std::vector<Item*> getInventoryList() const { return Inventory; }
 
     private:
         Class* playerClass;
         LevelSystem* playerLevel;
         std::vector<Effect> Effects;
-        EquipmentDelegate* Armors[(unsigned long long)ARMORSLOT::NUM_SLOTS];
-        EquipmentDelegate* Weapons[2];
+        Item* Armors[(unsigned long long)ARMORSLOT::NUM_SLOTS];
+        Item* Weapons[2];
+        std::vector<Item*> Inventory;
+
+        void cleanInventory() {
+            const auto to_remove = std::stable_partition(Inventory.begin(), Inventory.end(),
+             [](const Item* i) -> bool { return !i->isMarkedForDeletion(); });
+            std::for_each(to_remove, Inventory.end(), [](Item* i) { delete i; });
+            Inventory.erase(to_remove, Inventory.end()); 
+        }
+
+        friend class ItemManager;
 };

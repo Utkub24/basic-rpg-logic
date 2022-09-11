@@ -3,6 +3,7 @@
 #include "statblock.hpp"
 #include <typeinfo>
 #include "effect.hpp"
+#include <iostream> //for testing
 
 class ItemDelegate {
     public:
@@ -20,7 +21,7 @@ class ItemDelegate {
 class Potion : public ItemDelegate {
     public:
         Effect* effect;
-        const char* getType() override {return typeid(*this).name(); }
+        const char* getType() override { return typeid(*this).name(); }
 
         ~Potion() {
             if(effect) {
@@ -28,6 +29,7 @@ class Potion : public ItemDelegate {
                 effect = nullptr;
             }
         }
+
     private:
         Potion(std::string name, Effect* effect, uint16_t quantity = 1)
          :  ItemDelegate(name, true, true, quantity), effect(effect) {}
@@ -35,22 +37,8 @@ class Potion : public ItemDelegate {
         friend class ItemManager;
 };
 
-class Item {
-    public:
-        const ItemDelegate* getData() { return _data; }
-        ~Item() {
-            if(_data) {
-                delete _data;
-                _data = nullptr;
-            }
-        }
-    private:
-        ItemDelegate* _data;
-        Item(ItemDelegate* item)
-            : _data(item) {}
-        friend class ItemManager;
-        friend class PlayerCharacter;
-};
+
+
 
 class EquipmentDelegate : public ItemDelegate {
     public:
@@ -99,4 +87,38 @@ class Weapon final : public EquipmentDelegate {
         Weapon(std::string name, StatBlock stats, uint16_t min, uint16_t max, WEAPONSLOT slot, WEAPONTYPE type)
             : EquipmentDelegate(name, stats), slot(slot), type(type), minDmg(min), maxDmg(max) {}
         friend class ItemManager; 
+};
+
+class Item {
+    public:
+        const ItemDelegate* getData() { return _data; }
+        ~Item() {
+            if(_data) {
+                delete _data;
+                _data = nullptr;
+            }
+        }
+        const bool isMarkedForDeletion() const { return marked_for_deletion; }
+    private:
+        ItemDelegate* _data;
+        Item(ItemDelegate* item)
+            : _data(item) {}
+        bool marked_for_deletion = false;
+        friend class ItemManager;
+
+        friend std::ostream& operator<<(std::ostream& os, const Item& t) {
+            Armor* armor = dynamic_cast<Armor*>(t._data);
+            if(armor)
+                return os << "-" << armor->name << "(Physical Armor: " << armor->stats.PhysArmor << ", Magic Armor: " << armor->stats.MagicArmor << ")" << std::endl;
+
+            Weapon* weapon = dynamic_cast<Weapon*>(t._data);
+            if(weapon)
+                return os << "-" << weapon->name << "(Damage: " << weapon->minDmg << "-" << weapon->maxDmg << ")" << std::endl;
+
+            Potion* pot = dynamic_cast<Potion*>(t._data);
+            if(pot)
+                return os << "-" << pot->name << "(" << pot->quantity << ")" << std::endl;
+
+            return os;
+        }
 };
