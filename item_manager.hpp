@@ -26,8 +26,8 @@ class ItemManager {
             if(armor) {
                 unsigned long long slot_num = (unsigned long long)armor->slot;
                 if(p_char->Armors[slot_num]) {
-                    *p_char->playerClass -= ((Armor*)p_char->Armors[slot_num])->stats;
-                    MoveToInventory(p_char->Armors[slot_num], p_char);
+                   *p_char->playerClass -= ((Armor*)p_char->Armors[slot_num]->_data)->stats;
+                   MoveToInventory(p_char->Armors[slot_num], p_char);
 
                     p_char->Armors[slot_num] = item_to_equip;
                     *p_char->playerClass += armor->stats;
@@ -42,7 +42,7 @@ class ItemManager {
             if(weapon) {
                 unsigned long long slot_num = (unsigned long long)weapon->slot;
                 if(p_char->Weapons[slot_num]) {
-                    *p_char->playerClass -= ((Weapon*)p_char->Weapons[slot_num])->stats; 
+                    *p_char->playerClass -= ((Weapon*)p_char->Weapons[slot_num]->_data)->stats; 
                     MoveToInventory(p_char->Weapons[slot_num], p_char);
 
                     *p_char->playerClass += weapon->stats;

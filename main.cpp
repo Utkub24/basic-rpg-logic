@@ -54,9 +54,6 @@ int main() {
     Effect* FireHands = new Effect("Fire Hands", 2, 3, 0, -1, 0, 0);
     Item* FireHandsPot = ItemManager::CreatePotion("Fiery Hands Potion", FireHands, 1);
 
-    ItemManager::MoveToInventory(IronSword, &mister);
-    ItemManager::MoveToInventory(PlateMail, &mister);
-    ItemManager::MoveToInventory(LeatherArmor, &mister);
     ItemManager::MoveToInventory(FireHandsPot, &mister);
     std::cout << "Inventory: " << std::endl;
     for(auto i : mister.getInventoryList()) {
