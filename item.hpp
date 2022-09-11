@@ -28,6 +28,10 @@ class Item {
         friend class PlayerCharacter;
 };
 
+
+
+
+
 class EquipmentDelegate : public ItemDelegate {
     public:
         StatBlock stats;
