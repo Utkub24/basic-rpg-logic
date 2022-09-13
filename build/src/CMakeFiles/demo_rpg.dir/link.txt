@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdemo_rpg.a CMakeFiles/demo_rpg.dir/item.cpp.o CMakeFiles/demo_rpg.dir/demorpg.cpp.o
+/usr/bin/ranlib libdemo_rpg.a
