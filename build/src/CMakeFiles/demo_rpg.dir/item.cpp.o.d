@@ -1,7 +1,7 @@
 src/CMakeFiles/demo_rpg.dir/item.cpp.o: \
  /home/orka/Projects/demorpg/DemoRPG/src/item.cpp \
  /usr/include/stdc-predef.h \
- /home/orka/Projects/demorpg/DemoRPG/include/item.hpp \
+ /home/orka/Projects/demorpg/DemoRPG/include/item.h \
  /usr/include/c++/12.2.0/string \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -105,41 +105,5 @@ src/CMakeFiles/demo_rpg.dir/item.cpp.o: \
  /usr/include/bits/types/error_t.h \
  /usr/include/c++/12.2.0/bits/charconv.h \
  /usr/include/c++/12.2.0/bits/basic_string.tcc \
- /home/orka/Projects/demorpg/DemoRPG/include/statblock.hpp \
- /usr/include/c++/12.2.0/typeinfo \
- /home/orka/Projects/demorpg/DemoRPG/include/effect.hpp \
- /usr/include/c++/12.2.0/iostream /usr/include/c++/12.2.0/ostream \
- /usr/include/c++/12.2.0/ios /usr/include/c++/12.2.0/exception \
- /usr/include/c++/12.2.0/bits/exception_ptr.h \
- /usr/include/c++/12.2.0/bits/cxxabi_init_exception.h \
- /usr/include/c++/12.2.0/bits/nested_exception.h \
- /usr/include/c++/12.2.0/bits/ios_base.h \
- /usr/include/c++/12.2.0/ext/atomicity.h \
- /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/gthr.h \
- /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h \
- /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
- /usr/include/bits/types/struct_sched_param.h /usr/include/bits/cpu-set.h \
- /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
- /usr/include/bits/types/struct_tm.h \
- /usr/include/bits/types/struct_itimerspec.h /usr/include/bits/setjmp.h \
- /usr/include/bits/types/struct___jmp_buf_tag.h \
- /usr/include/bits/pthread_stack_min-dynamic.h \
- /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h \
- /usr/include/sys/single_threaded.h \
- /usr/include/c++/12.2.0/bits/locale_classes.h \
- /usr/include/c++/12.2.0/bits/locale_classes.tcc \
- /usr/include/c++/12.2.0/system_error \
- /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/error_constants.h \
- /usr/include/c++/12.2.0/stdexcept /usr/include/c++/12.2.0/streambuf \
- /usr/include/c++/12.2.0/bits/streambuf.tcc \
- /usr/include/c++/12.2.0/bits/basic_ios.h \
- /usr/include/c++/12.2.0/bits/locale_facets.h \
- /usr/include/c++/12.2.0/cwctype /usr/include/wctype.h \
- /usr/include/bits/wctype-wchar.h \
- /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/ctype_base.h \
- /usr/include/c++/12.2.0/bits/streambuf_iterator.h \
- /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h \
- /usr/include/c++/12.2.0/bits/locale_facets.tcc \
- /usr/include/c++/12.2.0/bits/basic_ios.tcc \
- /usr/include/c++/12.2.0/bits/ostream.tcc /usr/include/c++/12.2.0/istream \
- /usr/include/c++/12.2.0/bits/istream.tcc
+ /home/orka/Projects/demorpg/DemoRPG/include/statblock.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/effect.h

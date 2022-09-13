@@ -185,6 +185,54 @@ demo_rpg/fast:
 	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/build
 .PHONY : demo_rpg/fast
 
+ability.o: ability.cpp.o
+.PHONY : ability.o
+
+# target to build an object file
+ability.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/ability.cpp.o
+.PHONY : ability.cpp.o
+
+ability.i: ability.cpp.i
+.PHONY : ability.i
+
+# target to preprocess a source file
+ability.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/ability.cpp.i
+.PHONY : ability.cpp.i
+
+ability.s: ability.cpp.s
+.PHONY : ability.s
+
+# target to generate assembly for a file
+ability.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/ability.cpp.s
+.PHONY : ability.cpp.s
+
+cleric.o: cleric.cpp.o
+.PHONY : cleric.o
+
+# target to build an object file
+cleric.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/cleric.cpp.o
+.PHONY : cleric.cpp.o
+
+cleric.i: cleric.cpp.i
+.PHONY : cleric.i
+
+# target to preprocess a source file
+cleric.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/cleric.cpp.i
+.PHONY : cleric.cpp.i
+
+cleric.s: cleric.cpp.s
+.PHONY : cleric.s
+
+# target to generate assembly for a file
+cleric.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/cleric.cpp.s
+.PHONY : cleric.cpp.s
+
 demorpg.o: demorpg.cpp.o
 .PHONY : demorpg.o
 
@@ -208,6 +256,30 @@ demorpg.s: demorpg.cpp.s
 demorpg.cpp.s:
 	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/demorpg.cpp.s
 .PHONY : demorpg.cpp.s
+
+effect.o: effect.cpp.o
+.PHONY : effect.o
+
+# target to build an object file
+effect.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/effect.cpp.o
+.PHONY : effect.cpp.o
+
+effect.i: effect.cpp.i
+.PHONY : effect.i
+
+# target to preprocess a source file
+effect.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/effect.cpp.i
+.PHONY : effect.cpp.i
+
+effect.s: effect.cpp.s
+.PHONY : effect.s
+
+# target to generate assembly for a file
+effect.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/effect.cpp.s
+.PHONY : effect.cpp.s
 
 item.o: item.cpp.o
 .PHONY : item.o
@@ -233,6 +305,126 @@ item.cpp.s:
 	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/item.cpp.s
 .PHONY : item.cpp.s
 
+item_manager.o: item_manager.cpp.o
+.PHONY : item_manager.o
+
+# target to build an object file
+item_manager.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o
+.PHONY : item_manager.cpp.o
+
+item_manager.i: item_manager.cpp.i
+.PHONY : item_manager.i
+
+# target to preprocess a source file
+item_manager.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/item_manager.cpp.i
+.PHONY : item_manager.cpp.i
+
+item_manager.s: item_manager.cpp.s
+.PHONY : item_manager.s
+
+# target to generate assembly for a file
+item_manager.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/item_manager.cpp.s
+.PHONY : item_manager.cpp.s
+
+levelsystem.o: levelsystem.cpp.o
+.PHONY : levelsystem.o
+
+# target to build an object file
+levelsystem.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.o
+.PHONY : levelsystem.cpp.o
+
+levelsystem.i: levelsystem.cpp.i
+.PHONY : levelsystem.i
+
+# target to preprocess a source file
+levelsystem.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.i
+.PHONY : levelsystem.cpp.i
+
+levelsystem.s: levelsystem.cpp.s
+.PHONY : levelsystem.s
+
+# target to generate assembly for a file
+levelsystem.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.s
+.PHONY : levelsystem.cpp.s
+
+playercharacter.o: playercharacter.cpp.o
+.PHONY : playercharacter.o
+
+# target to build an object file
+playercharacter.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o
+.PHONY : playercharacter.cpp.o
+
+playercharacter.i: playercharacter.cpp.i
+.PHONY : playercharacter.i
+
+# target to preprocess a source file
+playercharacter.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.i
+.PHONY : playercharacter.cpp.i
+
+playercharacter.s: playercharacter.cpp.s
+.PHONY : playercharacter.s
+
+# target to generate assembly for a file
+playercharacter.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.s
+.PHONY : playercharacter.cpp.s
+
+pointpool.o: pointpool.cpp.o
+.PHONY : pointpool.o
+
+# target to build an object file
+pointpool.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/pointpool.cpp.o
+.PHONY : pointpool.cpp.o
+
+pointpool.i: pointpool.cpp.i
+.PHONY : pointpool.i
+
+# target to preprocess a source file
+pointpool.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/pointpool.cpp.i
+.PHONY : pointpool.cpp.i
+
+pointpool.s: pointpool.cpp.s
+.PHONY : pointpool.s
+
+# target to generate assembly for a file
+pointpool.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/pointpool.cpp.s
+.PHONY : pointpool.cpp.s
+
+statblock.o: statblock.cpp.o
+.PHONY : statblock.o
+
+# target to build an object file
+statblock.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/statblock.cpp.o
+.PHONY : statblock.cpp.o
+
+statblock.i: statblock.cpp.i
+.PHONY : statblock.i
+
+# target to preprocess a source file
+statblock.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/statblock.cpp.i
+.PHONY : statblock.cpp.i
+
+statblock.s: statblock.cpp.s
+.PHONY : statblock.s
+
+# target to generate assembly for a file
+statblock.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/statblock.cpp.s
+.PHONY : statblock.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -247,12 +439,36 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... demo_rpg"
+	@echo "... ability.o"
+	@echo "... ability.i"
+	@echo "... ability.s"
+	@echo "... cleric.o"
+	@echo "... cleric.i"
+	@echo "... cleric.s"
 	@echo "... demorpg.o"
 	@echo "... demorpg.i"
 	@echo "... demorpg.s"
+	@echo "... effect.o"
+	@echo "... effect.i"
+	@echo "... effect.s"
 	@echo "... item.o"
 	@echo "... item.i"
 	@echo "... item.s"
+	@echo "... item_manager.o"
+	@echo "... item_manager.i"
+	@echo "... item_manager.s"
+	@echo "... levelsystem.o"
+	@echo "... levelsystem.i"
+	@echo "... levelsystem.s"
+	@echo "... playercharacter.o"
+	@echo "... playercharacter.i"
+	@echo "... playercharacter.s"
+	@echo "... pointpool.o"
+	@echo "... pointpool.i"
+	@echo "... pointpool.s"
+	@echo "... statblock.o"
+	@echo "... statblock.i"
+	@echo "... statblock.s"
 .PHONY : help
 
 
