@@ -3,7 +3,12 @@
         {
             "name": "Linux",
             "includePath": [
+<<<<<<< HEAD
                 "${workspaceFolder}/**"
+=======
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/DemoRPG/include"
+>>>>>>> cmake_ver
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

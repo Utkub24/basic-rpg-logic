@@ -1,7 +1,7 @@
 #include <iostream>
-#include "playercharacter.hpp"
-#include "item_manager.hpp"
-#include "cleric.hpp"
+#include "playercharacter.h"
+#include "item_manager.h"
+#include "cleric.h"
 
 int main() {
     PlayerCharacter mister(new Cleric());
@@ -15,7 +15,7 @@ int main() {
     << "-Level: " << mister.getCurrentLevel() << std::endl
     << "-Exp: " << mister.getCurrentExp() << "/" << mister.getExpForNextLevel() << std::endl
     << "Abilities: " << std::endl;
-    for(auto& ability : mister.getClass()->Abilites) {
+    for(auto& ability : mister.getClass()->Abilities) {
         std::cout << "-" << ability.name << std::endl;
     }
     std::cout << "Effects: " << std::endl;
@@ -41,10 +41,6 @@ int main() {
         }
     }
 
-    std::cout << "Inventory: " << std::endl;
-    for(auto i : mister.getInventoryList()) {
-        std::cout << *i;
-    }
 
 
     Item* IronSword = ItemManager::CreateWeapon("Iron Sword", StatBlock(), 3, 6, WEAPONSLOT::ONEHAND, WEAPONTYPE::MELEE);
@@ -55,10 +51,6 @@ int main() {
     Item* FireHandsPot = ItemManager::CreatePotion("Fiery Hands Potion", FireHands, 1);
 
     ItemManager::MoveToInventory(FireHandsPot, &mister);
-    std::cout << "Inventory: " << std::endl;
-    for(auto i : mister.getInventoryList()) {
-        std::cout << *i;
-    }
 
 
     ItemManager::Equip(IronSword, &mister);
@@ -78,7 +70,7 @@ int main() {
     << "-Level: " << mister.getCurrentLevel() << std::endl
     << "-Exp: " << mister.getCurrentExp() << "/" << mister.getExpForNextLevel() << std::endl
     << "Abilities: " << std::endl;
-    for(auto& ability : mister.getClass()->Abilites) {
+    for(auto& ability : mister.getClass()->Abilities) {
         std::cout << "-" << ability.name << std::endl;
     }
 
@@ -103,10 +95,6 @@ int main() {
         } else {
             std:: cout << "-None" << std::endl;
         }
-    }
-    std::cout << "Inventory: " << std::endl;
-    for(auto i : mister.getInventoryList()) {
-        std::cout << *i;
     }
 
 

@@ -1,0 +1,82 @@
+[
+{
+  "directory": "/home/orka/Projects/demorpg/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/build/_deps/googletest-src/googlemock/include -I/home/orka/Projects/demorpg/build/_deps/googletest-src/googlemock -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/orka/Projects/demorpg/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/orka/Projects/demorpg/build/_deps/googletest-src/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/g++  -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googlemock/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googlemock -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/orka/Projects/demorpg/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/orka/Projects/demorpg/build/_deps/googletest-src/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include -I/home/orka/Projects/demorpg/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/g++  -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++20 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/demorpg.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/demorpg.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/demorpg.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/ability.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/ability.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/ability.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/pointpool.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/pointpool.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/pointpool.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/statblock.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/statblock.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/statblock.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/levelsystem.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/levelsystem.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/levelsystem.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/cleric.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/cleric.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/cleric.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/effect.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/effect.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/effect.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/item.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/item.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/item.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/item_manager.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/item_manager.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/item_manager.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/playercharacter.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/playercharacter.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/playercharacter.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/class.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/class.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/class.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/test",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest -g -std=gnu++20 -o CMakeFiles/demo_rpg_tests.dir/test.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/test/test.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/test/test.cpp"
+}
+]
