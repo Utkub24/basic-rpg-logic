@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "cleric.hpp"
-#include "playercharacter.hpp"
+#include "cleric.h"
+#include "playercharacter.h"
 
 /*TEST(ExampleTest, Guide) {
     EXPECT_TRUE(true); 

@@ -276,16 +276,16 @@ test/CMakeFiles/demo_rpg_tests.dir/test.cpp.o: \
  /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
  /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
  /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
- /home/orka/Projects/demorpg/DemoRPG/include/cleric.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/class.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/pointpool.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/statblock.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/ability.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/levelsystem.hpp \
+ /home/orka/Projects/demorpg/DemoRPG/include/cleric.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/class.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/pointpool.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/statblock.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/levelsystem.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/ability.h \
  /home/orka/Projects/demorpg/DemoRPG/include/macros.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/playercharacter.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/effect.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/item.hpp \
+ /home/orka/Projects/demorpg/DemoRPG/include/playercharacter.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/effect.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/item.h \
  /usr/include/c++/12.2.0/algorithm \
  /usr/include/c++/12.2.0/bits/ranges_algo.h \
  /usr/include/c++/12.2.0/bits/ranges_util.h \

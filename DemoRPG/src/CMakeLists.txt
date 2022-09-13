@@ -11,6 +11,7 @@ set(SOURCE
     item.cpp
     item_manager.cpp
     playercharacter.cpp
+    class.cpp
 )
 
 add_library(demo_rpg ${SOURCE})

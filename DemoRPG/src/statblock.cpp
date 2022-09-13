@@ -1,6 +1,6 @@
 #include "statblock.h"
 
-StatBlock::StatBlock(uint16_t n_str = 0, uint16_t n_int = 0, uint16_t n_dex = 0, uint16_t n_physarm = 0, uint16_t n_magicarm = 0)
+StatBlock::StatBlock(uint16_t n_str, uint16_t n_int, uint16_t n_dex, uint16_t n_physarm, uint16_t n_magicarm)
     : Str(n_str), Int(n_int), Dex(n_dex), PhysArmor(n_physarm), MagicArmor(n_magicarm) {} 
 
 void StatBlock::setStats(uint16_t n_str, uint16_t n_int, uint16_t n_dex, uint16_t n_physarm, uint16_t n_magicarm) {
@@ -11,7 +11,7 @@ void StatBlock::setStats(uint16_t n_str, uint16_t n_int, uint16_t n_dex, uint16_
     MagicArmor = n_magicarm;
 }
 
-void StatBlock::incStats(int i_str = 0, int i_int = 0, int i_dex = 0, int i_physarm = 0, int i_magarm = 0) {
+void StatBlock::incStats(int i_str, int i_int, int i_dex, int i_physarm, int i_magarm) {
     Str += i_str;
     Int += i_int;
     Dex += i_dex;

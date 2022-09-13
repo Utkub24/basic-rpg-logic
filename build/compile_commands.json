@@ -70,6 +70,11 @@
   "file": "/home/orka/Projects/demorpg/DemoRPG/src/playercharacter.cpp"
 },
 {
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -g -std=gnu++20 -o CMakeFiles/demo_rpg.dir/class.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/class.cpp",
+  "file": "/home/orka/Projects/demorpg/DemoRPG/src/class.cpp"
+},
+{
   "directory": "/home/orka/Projects/demorpg/build/test",
   "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/DemoRPG/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest -g -std=gnu++20 -o CMakeFiles/demo_rpg_tests.dir/test.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/test/test.cpp",
   "file": "/home/orka/Projects/demorpg/DemoRPG/test/test.cpp"

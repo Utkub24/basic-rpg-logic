@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/demo_rpg.dir/ability.cpp.o"
   "CMakeFiles/demo_rpg.dir/ability.cpp.o.d"
+  "CMakeFiles/demo_rpg.dir/class.cpp.o"
+  "CMakeFiles/demo_rpg.dir/class.cpp.o.d"
   "CMakeFiles/demo_rpg.dir/cleric.cpp.o"
   "CMakeFiles/demo_rpg.dir/cleric.cpp.o.d"
   "CMakeFiles/demo_rpg.dir/demorpg.cpp.o"

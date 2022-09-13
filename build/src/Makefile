@@ -209,6 +209,30 @@ ability.cpp.s:
 	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/ability.cpp.s
 .PHONY : ability.cpp.s
 
+class.o: class.cpp.o
+.PHONY : class.o
+
+# target to build an object file
+class.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/class.cpp.o
+.PHONY : class.cpp.o
+
+class.i: class.cpp.i
+.PHONY : class.i
+
+# target to preprocess a source file
+class.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/class.cpp.i
+.PHONY : class.cpp.i
+
+class.s: class.cpp.s
+.PHONY : class.s
+
+# target to generate assembly for a file
+class.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/class.cpp.s
+.PHONY : class.cpp.s
+
 cleric.o: cleric.cpp.o
 .PHONY : cleric.o
 
@@ -442,6 +466,9 @@ help:
 	@echo "... ability.o"
 	@echo "... ability.i"
 	@echo "... ability.s"
+	@echo "... class.o"
+	@echo "... class.i"
+	@echo "... class.s"
 	@echo "... cleric.o"
 	@echo "... cleric.i"
 	@echo "... cleric.s"

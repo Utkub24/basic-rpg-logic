@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/orka/Projects/demorpg/DemoRPG/src/ability.cpp" "src/CMakeFiles/demo_rpg.dir/ability.cpp.o" "gcc" "src/CMakeFiles/demo_rpg.dir/ability.cpp.o.d"
+  "/home/orka/Projects/demorpg/DemoRPG/src/class.cpp" "src/CMakeFiles/demo_rpg.dir/class.cpp.o" "gcc" "src/CMakeFiles/demo_rpg.dir/class.cpp.o.d"
   "/home/orka/Projects/demorpg/DemoRPG/src/cleric.cpp" "src/CMakeFiles/demo_rpg.dir/cleric.cpp.o" "gcc" "src/CMakeFiles/demo_rpg.dir/cleric.cpp.o.d"
   "/home/orka/Projects/demorpg/DemoRPG/src/demorpg.cpp" "src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o" "gcc" "src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o.d"
   "/home/orka/Projects/demorpg/DemoRPG/src/effect.cpp" "src/CMakeFiles/demo_rpg.dir/effect.cpp.o" "gcc" "src/CMakeFiles/demo_rpg.dir/effect.cpp.o.d"

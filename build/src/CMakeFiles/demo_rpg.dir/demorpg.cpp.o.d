@@ -138,67 +138,37 @@ src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o: \
  /usr/include/c++/12.2.0/bits/basic_ios.tcc \
  /usr/include/c++/12.2.0/bits/ostream.tcc /usr/include/c++/12.2.0/istream \
  /usr/include/c++/12.2.0/bits/istream.tcc \
- /home/orka/Projects/demorpg/DemoRPG/include/playercharacter.hpp \
+ /home/orka/Projects/demorpg/DemoRPG/include/playercharacter.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/class.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/pointpool.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/statblock.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/levelsystem.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/ability.h \
  /usr/include/c++/12.2.0/vector \
  /usr/include/c++/12.2.0/bits/stl_uninitialized.h \
  /usr/include/c++/12.2.0/bits/stl_vector.h \
  /usr/include/c++/12.2.0/bits/stl_bvector.h \
  /usr/include/c++/12.2.0/bits/vector.tcc \
- /home/orka/Projects/demorpg/DemoRPG/include/class.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/pointpool.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/statblock.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/ability.hpp \
- /usr/include/c++/12.2.0/memory \
- /usr/include/c++/12.2.0/bits/stl_tempbuf.h \
- /usr/include/c++/12.2.0/bits/stl_raw_storage_iter.h \
- /usr/include/c++/12.2.0/bits/align.h /usr/include/c++/12.2.0/bit \
- /usr/include/c++/12.2.0/bits/uses_allocator.h \
- /usr/include/c++/12.2.0/bits/unique_ptr.h /usr/include/c++/12.2.0/tuple \
- /usr/include/c++/12.2.0/bits/shared_ptr.h \
- /usr/include/c++/12.2.0/bits/shared_ptr_base.h \
- /usr/include/c++/12.2.0/bits/allocated_ptr.h \
- /usr/include/c++/12.2.0/ext/aligned_buffer.h \
- /usr/include/c++/12.2.0/ext/concurrence.h \
- /usr/include/c++/12.2.0/bits/shared_ptr_atomic.h \
- /usr/include/c++/12.2.0/bits/atomic_base.h \
- /usr/include/c++/12.2.0/bits/atomic_lockfree_defines.h \
- /usr/include/c++/12.2.0/bits/atomic_wait.h \
- /usr/include/c++/12.2.0/climits \
- /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed/limits.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed/syslimits.h \
- /usr/include/limits.h /usr/include/bits/posix1_lim.h \
- /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
- /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
- /usr/include/bits/uio_lim.h /usr/include/unistd.h \
- /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
- /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
- /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /usr/include/syscall.h \
- /usr/include/sys/syscall.h /usr/include/asm/unistd.h \
- /usr/include/asm/unistd_64.h /usr/include/bits/syscall.h \
- /usr/include/c++/12.2.0/bits/std_mutex.h \
- /usr/include/c++/12.2.0/backward/auto_ptr.h \
- /usr/include/c++/12.2.0/bits/ranges_uninitialized.h \
- /usr/include/c++/12.2.0/bits/ranges_algobase.h \
- /usr/include/c++/12.2.0/bits/uses_allocator_args.h \
- /usr/include/c++/12.2.0/pstl/glue_memory_defs.h \
- /usr/include/c++/12.2.0/pstl/execution_defs.h \
- /home/orka/Projects/demorpg/DemoRPG/include/levelsystem.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/macros.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/effect.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/item.hpp \
+ /home/orka/Projects/demorpg/DemoRPG/include/effect.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/item.h \
  /usr/include/c++/12.2.0/algorithm \
  /usr/include/c++/12.2.0/bits/stl_algo.h \
  /usr/include/c++/12.2.0/bits/algorithmfwd.h \
  /usr/include/c++/12.2.0/bits/stl_heap.h \
+ /usr/include/c++/12.2.0/bits/stl_tempbuf.h \
  /usr/include/c++/12.2.0/bits/uniform_int_dist.h \
  /usr/include/c++/12.2.0/bits/ranges_algo.h \
+ /usr/include/c++/12.2.0/bits/ranges_algobase.h \
  /usr/include/c++/12.2.0/bits/ranges_util.h \
  /usr/include/c++/12.2.0/pstl/glue_algorithm_defs.h \
- /home/orka/Projects/demorpg/DemoRPG/include/item_manager.hpp \
- /home/orka/Projects/demorpg/DemoRPG/include/cleric.hpp \
+ /usr/include/c++/12.2.0/pstl/execution_defs.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/item_manager.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/cleric.h \
  /usr/include/c++/12.2.0/map /usr/include/c++/12.2.0/bits/stl_tree.h \
+ /usr/include/c++/12.2.0/ext/aligned_buffer.h \
  /usr/include/c++/12.2.0/bits/node_handle.h \
- /usr/include/c++/12.2.0/bits/stl_map.h \
+ /usr/include/c++/12.2.0/bits/stl_map.h /usr/include/c++/12.2.0/tuple \
+ /usr/include/c++/12.2.0/bits/uses_allocator.h \
  /usr/include/c++/12.2.0/bits/stl_multimap.h \
- /usr/include/c++/12.2.0/bits/erase_if.h
+ /usr/include/c++/12.2.0/bits/erase_if.h \
+ /home/orka/Projects/demorpg/DemoRPG/include/macros.hpp
