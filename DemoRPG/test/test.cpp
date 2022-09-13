@@ -8,9 +8,28 @@
     EXPECT_EQ(true, true);
 }*/
 
-TEST(ClericTest, creation) {
-    PlayerCharacter p1(new Cleric());
-    ASSERT_TRUE(&p1);
-    p1.gainExp(100);
-    ASSERT_EQ(p1.getCurrentLevel(), 2);
+class PlayerTest : public ::testing::Test {
+    protected:
+        PlayerCharacter player = new Cleric();
+};
+
+
+
+TEST_F(PlayerTest, creation) {
+    ASSERT_TRUE(&player);
+    ASSERT_TRUE(player.getClass());
+}
+
+
+TEST_F(PlayerTest, basestats) {
+    ASSERT_EQ(player.getMaxHp(), Cleric::BASEHP);
+    ASSERT_EQ(player.getClass()->Str, Cleric::BASESTR);
+    ASSERT_EQ(player.getClass()->Int, Cleric::BASEINT);
+    ASSERT_EQ(player.getClass()->Dex, Cleric::BASEDEX);
+
+}
+
+TEST_F(PlayerTest, leveling) {
+    player.gainExp(100);
+    EXPECT_EQ(player.getCurrentLevel(), 2);
 }
