@@ -28,8 +28,8 @@ class Potion : public ItemDelegate {
 
 class EquipmentDelegate : public ItemDelegate {
     public:
-        const uint32_t UniqueID;
         StatBlock stats;
+        const uint32_t UniqueID;
         virtual ~EquipmentDelegate();
     protected:
         EquipmentDelegate(std::string name, StatBlock stats);

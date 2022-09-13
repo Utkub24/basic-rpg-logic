@@ -7,9 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/orka/Projects/demorpg/DemoRPG/CMakeLists.txt"
-  "/home/orka/Projects/demorpg/DemoRPG/src/CMakeLists.txt"
-  "/home/orka/Projects/demorpg/DemoRPG/test/CMakeLists.txt"
+  "/home/orka/Projects/demorpg/CMakeLists.txt"
   "CMakeFiles/3.24.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.24.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.24.1/CMakeSystem.cmake"
@@ -22,6 +20,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/googletest-src/googletest/cmake/gtest.pc.in"
   "_deps/googletest-src/googletest/cmake/gtest_main.pc.in"
   "_deps/googletest-src/googletest/cmake/internal_utils.cmake"
+  "/home/orka/Projects/demorpg/src/CMakeLists.txt"
+  "/home/orka/Projects/demorpg/test/CMakeLists.txt"
   "/usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
   "/usr/share/cmake/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake/Modules/CMakeCXXInformation.cmake"
@@ -67,6 +67,8 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/googletest-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/googletest-build/googletest/generated/gmock.pc"
   "_deps/googletest-build/googletest/generated/gmock_main.pc"
@@ -76,16 +78,14 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/googletest-build/googletest/generated/gtest.pc"
   "_deps/googletest-build/googletest/generated/gtest_main.pc"
   "_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "src/CMakeFiles/demo_rpg.dir/DependInfo.cmake"
+  "test/CMakeFiles/demo_rpg_test.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "src/CMakeFiles/demo_rpg.dir/DependInfo.cmake"
-  "test/CMakeFiles/demo_rpg_tests.dir/DependInfo.cmake"
   )

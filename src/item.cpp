@@ -4,7 +4,7 @@ static uint32_t EQUIPMENTUNIQUEIDITERATOR = 0u;
 
 
 ItemDelegate::~ItemDelegate() {}
-ItemDelegate::ItemDelegate(std::string name, bool isConsumable = false, bool isStackable = false, uint16_t quantity = 1)
+ItemDelegate::ItemDelegate(std::string name, bool isConsumable, bool isStackable, uint16_t quantity)
     : name(name), isConsumable(isConsumable), isStackable(isStackable), quantity(quantity) { if(quantity == 0) this->quantity = 1; } 
 
 
@@ -15,7 +15,7 @@ Potion::~Potion() {
     }
 }
 
-Potion::Potion(std::string name, Effect* effect, uint16_t quantity = 1)
+Potion::Potion(std::string name, Effect* effect, uint16_t quantity)
     :  ItemDelegate(name, true, true, quantity), effect(effect) {}
 
 

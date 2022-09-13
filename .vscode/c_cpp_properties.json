@@ -3,19 +3,22 @@
         {
             "name": "Linux",
             "includePath": [
-<<<<<<< HEAD
-                "${workspaceFolder}/**"
-=======
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/DemoRPG/include"
->>>>>>> cmake_ver
+                "${workspaceFolder}/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
             "cppStandard": "c++14",
             "intelliSenseMode": "linux-clang-x64",
-            "configurationProvider": "ms-vscode.cmake-tools"
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
         }
     ],
     "version": 4

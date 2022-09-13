@@ -57,7 +57,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orka/Projects/demorpg/DemoRPG
+CMAKE_SOURCE_DIR = /home/orka/Projects/demorpg
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/orka/Projects/demorpg/build
@@ -172,6 +172,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named demo_rpg
+
+# Build rule for target.
+demo_rpg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_rpg
+.PHONY : demo_rpg
+
+# fast build rule for target.
+demo_rpg/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/build
+.PHONY : demo_rpg/fast
+
+#=============================================================================
+# Target rules for targets named demo_rpg_test
+
+# Build rule for target.
+demo_rpg_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_rpg_test
+.PHONY : demo_rpg_test
+
+# fast build rule for target.
+demo_rpg_test/fast:
+	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/demo_rpg_test.dir/build.make test/CMakeFiles/demo_rpg_test.dir/build
+.PHONY : demo_rpg_test/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -223,32 +249,6 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
-#=============================================================================
-# Target rules for targets named demo_rpg
-
-# Build rule for target.
-demo_rpg: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_rpg
-.PHONY : demo_rpg
-
-# fast build rule for target.
-demo_rpg/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/build
-.PHONY : demo_rpg/fast
-
-#=============================================================================
-# Target rules for targets named demo_rpg_tests
-
-# Build rule for target.
-demo_rpg_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_rpg_tests
-.PHONY : demo_rpg_tests
-
-# fast build rule for target.
-demo_rpg_tests/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/demo_rpg_tests.dir/build.make test/CMakeFiles/demo_rpg_tests.dir/build
-.PHONY : demo_rpg_tests/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -263,7 +263,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... demo_rpg"
-	@echo "... demo_rpg_tests"
+	@echo "... demo_rpg_test"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"

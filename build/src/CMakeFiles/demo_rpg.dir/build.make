@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orka/Projects/demorpg/DemoRPG
+CMAKE_SOURCE_DIR = /home/orka/Projects/demorpg
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/orka/Projects/demorpg/build
@@ -70,158 +70,158 @@ include src/CMakeFiles/demo_rpg.dir/progress.make
 include src/CMakeFiles/demo_rpg.dir/flags.make
 
 src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/demorpg.cpp
+src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o: /home/orka/Projects/demorpg/src/demorpg.cpp
 src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o -MF CMakeFiles/demo_rpg.dir/demorpg.cpp.o.d -o CMakeFiles/demo_rpg.dir/demorpg.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/demorpg.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/demorpg.cpp.o -MF CMakeFiles/demo_rpg.dir/demorpg.cpp.o.d -o CMakeFiles/demo_rpg.dir/demorpg.cpp.o -c /home/orka/Projects/demorpg/src/demorpg.cpp
 
 src/CMakeFiles/demo_rpg.dir/demorpg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/demorpg.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/demorpg.cpp > CMakeFiles/demo_rpg.dir/demorpg.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/demorpg.cpp > CMakeFiles/demo_rpg.dir/demorpg.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/demorpg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/demorpg.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/demorpg.cpp -o CMakeFiles/demo_rpg.dir/demorpg.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/demorpg.cpp -o CMakeFiles/demo_rpg.dir/demorpg.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/ability.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/ability.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/ability.cpp
+src/CMakeFiles/demo_rpg.dir/ability.cpp.o: /home/orka/Projects/demorpg/src/ability.cpp
 src/CMakeFiles/demo_rpg.dir/ability.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/demo_rpg.dir/ability.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/ability.cpp.o -MF CMakeFiles/demo_rpg.dir/ability.cpp.o.d -o CMakeFiles/demo_rpg.dir/ability.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/ability.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/ability.cpp.o -MF CMakeFiles/demo_rpg.dir/ability.cpp.o.d -o CMakeFiles/demo_rpg.dir/ability.cpp.o -c /home/orka/Projects/demorpg/src/ability.cpp
 
 src/CMakeFiles/demo_rpg.dir/ability.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/ability.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/ability.cpp > CMakeFiles/demo_rpg.dir/ability.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/ability.cpp > CMakeFiles/demo_rpg.dir/ability.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/ability.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/ability.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/ability.cpp -o CMakeFiles/demo_rpg.dir/ability.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/ability.cpp -o CMakeFiles/demo_rpg.dir/ability.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/pointpool.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/pointpool.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/pointpool.cpp
+src/CMakeFiles/demo_rpg.dir/pointpool.cpp.o: /home/orka/Projects/demorpg/src/pointpool.cpp
 src/CMakeFiles/demo_rpg.dir/pointpool.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/demo_rpg.dir/pointpool.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/pointpool.cpp.o -MF CMakeFiles/demo_rpg.dir/pointpool.cpp.o.d -o CMakeFiles/demo_rpg.dir/pointpool.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/pointpool.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/pointpool.cpp.o -MF CMakeFiles/demo_rpg.dir/pointpool.cpp.o.d -o CMakeFiles/demo_rpg.dir/pointpool.cpp.o -c /home/orka/Projects/demorpg/src/pointpool.cpp
 
 src/CMakeFiles/demo_rpg.dir/pointpool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/pointpool.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/pointpool.cpp > CMakeFiles/demo_rpg.dir/pointpool.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/pointpool.cpp > CMakeFiles/demo_rpg.dir/pointpool.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/pointpool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/pointpool.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/pointpool.cpp -o CMakeFiles/demo_rpg.dir/pointpool.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/pointpool.cpp -o CMakeFiles/demo_rpg.dir/pointpool.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/statblock.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/statblock.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/statblock.cpp
+src/CMakeFiles/demo_rpg.dir/statblock.cpp.o: /home/orka/Projects/demorpg/src/statblock.cpp
 src/CMakeFiles/demo_rpg.dir/statblock.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/demo_rpg.dir/statblock.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/statblock.cpp.o -MF CMakeFiles/demo_rpg.dir/statblock.cpp.o.d -o CMakeFiles/demo_rpg.dir/statblock.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/statblock.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/statblock.cpp.o -MF CMakeFiles/demo_rpg.dir/statblock.cpp.o.d -o CMakeFiles/demo_rpg.dir/statblock.cpp.o -c /home/orka/Projects/demorpg/src/statblock.cpp
 
 src/CMakeFiles/demo_rpg.dir/statblock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/statblock.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/statblock.cpp > CMakeFiles/demo_rpg.dir/statblock.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/statblock.cpp > CMakeFiles/demo_rpg.dir/statblock.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/statblock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/statblock.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/statblock.cpp -o CMakeFiles/demo_rpg.dir/statblock.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/statblock.cpp -o CMakeFiles/demo_rpg.dir/statblock.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/levelsystem.cpp
+src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.o: /home/orka/Projects/demorpg/src/levelsystem.cpp
 src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.o -MF CMakeFiles/demo_rpg.dir/levelsystem.cpp.o.d -o CMakeFiles/demo_rpg.dir/levelsystem.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/levelsystem.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.o -MF CMakeFiles/demo_rpg.dir/levelsystem.cpp.o.d -o CMakeFiles/demo_rpg.dir/levelsystem.cpp.o -c /home/orka/Projects/demorpg/src/levelsystem.cpp
 
 src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/levelsystem.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/levelsystem.cpp > CMakeFiles/demo_rpg.dir/levelsystem.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/levelsystem.cpp > CMakeFiles/demo_rpg.dir/levelsystem.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/levelsystem.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/levelsystem.cpp -o CMakeFiles/demo_rpg.dir/levelsystem.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/levelsystem.cpp -o CMakeFiles/demo_rpg.dir/levelsystem.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/cleric.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/cleric.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/cleric.cpp
+src/CMakeFiles/demo_rpg.dir/cleric.cpp.o: /home/orka/Projects/demorpg/src/cleric.cpp
 src/CMakeFiles/demo_rpg.dir/cleric.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/demo_rpg.dir/cleric.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/cleric.cpp.o -MF CMakeFiles/demo_rpg.dir/cleric.cpp.o.d -o CMakeFiles/demo_rpg.dir/cleric.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/cleric.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/cleric.cpp.o -MF CMakeFiles/demo_rpg.dir/cleric.cpp.o.d -o CMakeFiles/demo_rpg.dir/cleric.cpp.o -c /home/orka/Projects/demorpg/src/cleric.cpp
 
 src/CMakeFiles/demo_rpg.dir/cleric.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/cleric.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/cleric.cpp > CMakeFiles/demo_rpg.dir/cleric.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/cleric.cpp > CMakeFiles/demo_rpg.dir/cleric.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/cleric.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/cleric.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/cleric.cpp -o CMakeFiles/demo_rpg.dir/cleric.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/cleric.cpp -o CMakeFiles/demo_rpg.dir/cleric.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/effect.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/effect.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/effect.cpp
+src/CMakeFiles/demo_rpg.dir/effect.cpp.o: /home/orka/Projects/demorpg/src/effect.cpp
 src/CMakeFiles/demo_rpg.dir/effect.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/demo_rpg.dir/effect.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/effect.cpp.o -MF CMakeFiles/demo_rpg.dir/effect.cpp.o.d -o CMakeFiles/demo_rpg.dir/effect.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/effect.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/effect.cpp.o -MF CMakeFiles/demo_rpg.dir/effect.cpp.o.d -o CMakeFiles/demo_rpg.dir/effect.cpp.o -c /home/orka/Projects/demorpg/src/effect.cpp
 
 src/CMakeFiles/demo_rpg.dir/effect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/effect.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/effect.cpp > CMakeFiles/demo_rpg.dir/effect.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/effect.cpp > CMakeFiles/demo_rpg.dir/effect.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/effect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/effect.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/effect.cpp -o CMakeFiles/demo_rpg.dir/effect.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/effect.cpp -o CMakeFiles/demo_rpg.dir/effect.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/item.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/item.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/item.cpp
+src/CMakeFiles/demo_rpg.dir/item.cpp.o: /home/orka/Projects/demorpg/src/item.cpp
 src/CMakeFiles/demo_rpg.dir/item.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/demo_rpg.dir/item.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/item.cpp.o -MF CMakeFiles/demo_rpg.dir/item.cpp.o.d -o CMakeFiles/demo_rpg.dir/item.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/item.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/item.cpp.o -MF CMakeFiles/demo_rpg.dir/item.cpp.o.d -o CMakeFiles/demo_rpg.dir/item.cpp.o -c /home/orka/Projects/demorpg/src/item.cpp
 
 src/CMakeFiles/demo_rpg.dir/item.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/item.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/item.cpp > CMakeFiles/demo_rpg.dir/item.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/item.cpp > CMakeFiles/demo_rpg.dir/item.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/item.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/item.cpp -o CMakeFiles/demo_rpg.dir/item.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/item.cpp -o CMakeFiles/demo_rpg.dir/item.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/item_manager.cpp
+src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: /home/orka/Projects/demorpg/src/item_manager.cpp
 src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o -MF CMakeFiles/demo_rpg.dir/item_manager.cpp.o.d -o CMakeFiles/demo_rpg.dir/item_manager.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/item_manager.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o -MF CMakeFiles/demo_rpg.dir/item_manager.cpp.o.d -o CMakeFiles/demo_rpg.dir/item_manager.cpp.o -c /home/orka/Projects/demorpg/src/item_manager.cpp
 
 src/CMakeFiles/demo_rpg.dir/item_manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/item_manager.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/item_manager.cpp > CMakeFiles/demo_rpg.dir/item_manager.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/item_manager.cpp > CMakeFiles/demo_rpg.dir/item_manager.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/item_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/item_manager.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/item_manager.cpp -o CMakeFiles/demo_rpg.dir/item_manager.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/item_manager.cpp -o CMakeFiles/demo_rpg.dir/item_manager.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/playercharacter.cpp
+src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o: /home/orka/Projects/demorpg/src/playercharacter.cpp
 src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o -MF CMakeFiles/demo_rpg.dir/playercharacter.cpp.o.d -o CMakeFiles/demo_rpg.dir/playercharacter.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/playercharacter.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o -MF CMakeFiles/demo_rpg.dir/playercharacter.cpp.o.d -o CMakeFiles/demo_rpg.dir/playercharacter.cpp.o -c /home/orka/Projects/demorpg/src/playercharacter.cpp
 
 src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/playercharacter.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/playercharacter.cpp > CMakeFiles/demo_rpg.dir/playercharacter.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/playercharacter.cpp > CMakeFiles/demo_rpg.dir/playercharacter.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/playercharacter.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/playercharacter.cpp -o CMakeFiles/demo_rpg.dir/playercharacter.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/playercharacter.cpp -o CMakeFiles/demo_rpg.dir/playercharacter.cpp.s
 
 src/CMakeFiles/demo_rpg.dir/class.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
-src/CMakeFiles/demo_rpg.dir/class.cpp.o: /home/orka/Projects/demorpg/DemoRPG/src/class.cpp
+src/CMakeFiles/demo_rpg.dir/class.cpp.o: /home/orka/Projects/demorpg/src/class.cpp
 src/CMakeFiles/demo_rpg.dir/class.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/demo_rpg.dir/class.cpp.o"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/class.cpp.o -MF CMakeFiles/demo_rpg.dir/class.cpp.o.d -o CMakeFiles/demo_rpg.dir/class.cpp.o -c /home/orka/Projects/demorpg/DemoRPG/src/class.cpp
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/class.cpp.o -MF CMakeFiles/demo_rpg.dir/class.cpp.o.d -o CMakeFiles/demo_rpg.dir/class.cpp.o -c /home/orka/Projects/demorpg/src/class.cpp
 
 src/CMakeFiles/demo_rpg.dir/class.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/class.cpp.i"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/DemoRPG/src/class.cpp > CMakeFiles/demo_rpg.dir/class.cpp.i
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/class.cpp > CMakeFiles/demo_rpg.dir/class.cpp.i
 
 src/CMakeFiles/demo_rpg.dir/class.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/class.cpp.s"
-	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/DemoRPG/src/class.cpp -o CMakeFiles/demo_rpg.dir/class.cpp.s
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/class.cpp -o CMakeFiles/demo_rpg.dir/class.cpp.s
 
 # Object files for target demo_rpg
 demo_rpg_OBJECTS = \
@@ -266,6 +266,6 @@ src/CMakeFiles/demo_rpg.dir/clean:
 .PHONY : src/CMakeFiles/demo_rpg.dir/clean
 
 src/CMakeFiles/demo_rpg.dir/depend:
-	cd /home/orka/Projects/demorpg/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orka/Projects/demorpg/DemoRPG /home/orka/Projects/demorpg/DemoRPG/src /home/orka/Projects/demorpg/build /home/orka/Projects/demorpg/build/src /home/orka/Projects/demorpg/build/src/CMakeFiles/demo_rpg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/orka/Projects/demorpg/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orka/Projects/demorpg /home/orka/Projects/demorpg/src /home/orka/Projects/demorpg/build /home/orka/Projects/demorpg/build/src /home/orka/Projects/demorpg/build/src/CMakeFiles/demo_rpg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/demo_rpg.dir/depend
 

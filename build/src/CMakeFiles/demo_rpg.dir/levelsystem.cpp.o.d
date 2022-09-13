@@ -1,7 +1,7 @@
 src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.o: \
- /home/orka/Projects/demorpg/DemoRPG/src/levelsystem.cpp \
+ /home/orka/Projects/demorpg/src/levelsystem.cpp \
  /usr/include/stdc-predef.h \
- /home/orka/Projects/demorpg/DemoRPG/include/levelsystem.h \
+ /home/orka/Projects/demorpg/include/levelsystem.h \
  /usr/include/c++/12.2.0/cstdint \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \

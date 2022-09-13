@@ -1,8 +1,8 @@
 src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: \
- /home/orka/Projects/demorpg/DemoRPG/src/item_manager.cpp \
+ /home/orka/Projects/demorpg/src/item_manager.cpp \
  /usr/include/stdc-predef.h \
- /home/orka/Projects/demorpg/DemoRPG/include/item_manager.h \
- /home/orka/Projects/demorpg/DemoRPG/include/item.h \
+ /home/orka/Projects/demorpg/include/item_manager.h \
+ /home/orka/Projects/demorpg/include/item.h \
  /usr/include/c++/12.2.0/string \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -25,17 +25,6 @@ src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/c++/12.2.0/type_traits \
- /usr/include/c++/12.2.0/compare /usr/include/c++/12.2.0/concepts \
- /usr/include/c++/12.2.0/bits/stl_construct.h /usr/include/c++/12.2.0/new \
- /usr/include/c++/12.2.0/bits/exception.h \
- /usr/include/c++/12.2.0/bits/move.h \
- /usr/include/c++/12.2.0/bits/stl_iterator_base_types.h \
- /usr/include/c++/12.2.0/bits/iterator_concepts.h \
- /usr/include/c++/12.2.0/bits/ptr_traits.h \
- /usr/include/c++/12.2.0/bits/ranges_cmp.h \
- /usr/include/c++/12.2.0/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/12.2.0/bits/concept_check.h \
- /usr/include/c++/12.2.0/debug/assertions.h \
  /usr/include/c++/12.2.0/cstdint \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/types.h \
@@ -43,9 +32,11 @@ src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
  /usr/include/c++/12.2.0/bits/allocator.h \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h \
- /usr/include/c++/12.2.0/bits/new_allocator.h \
+ /usr/include/c++/12.2.0/bits/new_allocator.h /usr/include/c++/12.2.0/new \
+ /usr/include/c++/12.2.0/bits/exception.h \
  /usr/include/c++/12.2.0/bits/functexcept.h \
  /usr/include/c++/12.2.0/bits/exception_defines.h \
+ /usr/include/c++/12.2.0/bits/move.h \
  /usr/include/c++/12.2.0/bits/cpp_type_traits.h \
  /usr/include/c++/12.2.0/bits/localefwd.h \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++locale.h \
@@ -55,8 +46,13 @@ src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: \
  /usr/include/bits/endian.h /usr/include/bits/endianness.h \
  /usr/include/c++/12.2.0/bits/ostream_insert.h \
  /usr/include/c++/12.2.0/bits/cxxabi_forced.h \
+ /usr/include/c++/12.2.0/bits/stl_iterator_base_types.h \
+ /usr/include/c++/12.2.0/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/12.2.0/bits/concept_check.h \
+ /usr/include/c++/12.2.0/debug/assertions.h \
  /usr/include/c++/12.2.0/bits/stl_iterator.h \
  /usr/include/c++/12.2.0/ext/type_traits.h \
+ /usr/include/c++/12.2.0/bits/ptr_traits.h \
  /usr/include/c++/12.2.0/bits/stl_function.h \
  /usr/include/c++/12.2.0/backward/binders.h \
  /usr/include/c++/12.2.0/ext/numeric_traits.h \
@@ -72,12 +68,10 @@ src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: \
  /usr/include/c++/12.2.0/bits/basic_string.h \
  /usr/include/c++/12.2.0/ext/alloc_traits.h \
  /usr/include/c++/12.2.0/bits/alloc_traits.h \
+ /usr/include/c++/12.2.0/bits/stl_construct.h \
  /usr/include/c++/12.2.0/string_view \
  /usr/include/c++/12.2.0/bits/functional_hash.h \
  /usr/include/c++/12.2.0/bits/hash_bytes.h \
- /usr/include/c++/12.2.0/bits/ranges_base.h \
- /usr/include/c++/12.2.0/bits/max_size_type.h \
- /usr/include/c++/12.2.0/numbers \
  /usr/include/c++/12.2.0/bits/string_view.tcc \
  /usr/include/c++/12.2.0/ext/string_conversions.h \
  /usr/include/c++/12.2.0/cstdlib /usr/include/stdlib.h \
@@ -106,13 +100,13 @@ src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: \
  /usr/include/bits/types/error_t.h \
  /usr/include/c++/12.2.0/bits/charconv.h \
  /usr/include/c++/12.2.0/bits/basic_string.tcc \
- /home/orka/Projects/demorpg/DemoRPG/include/statblock.h \
- /home/orka/Projects/demorpg/DemoRPG/include/effect.h \
- /home/orka/Projects/demorpg/DemoRPG/include/playercharacter.h \
- /home/orka/Projects/demorpg/DemoRPG/include/class.h \
- /home/orka/Projects/demorpg/DemoRPG/include/pointpool.h \
- /home/orka/Projects/demorpg/DemoRPG/include/levelsystem.h \
- /home/orka/Projects/demorpg/DemoRPG/include/ability.h \
+ /home/orka/Projects/demorpg/include/statblock.h \
+ /home/orka/Projects/demorpg/include/effect.h \
+ /home/orka/Projects/demorpg/include/playercharacter.h \
+ /home/orka/Projects/demorpg/include/class.h \
+ /home/orka/Projects/demorpg/include/pointpool.h \
+ /home/orka/Projects/demorpg/include/levelsystem.h \
+ /home/orka/Projects/demorpg/include/ability.h \
  /usr/include/c++/12.2.0/vector \
  /usr/include/c++/12.2.0/bits/stl_uninitialized.h \
  /usr/include/c++/12.2.0/bits/stl_vector.h \
@@ -124,8 +118,5 @@ src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o: \
  /usr/include/c++/12.2.0/bits/stl_heap.h \
  /usr/include/c++/12.2.0/bits/stl_tempbuf.h \
  /usr/include/c++/12.2.0/bits/uniform_int_dist.h \
- /usr/include/c++/12.2.0/bits/ranges_algo.h \
- /usr/include/c++/12.2.0/bits/ranges_algobase.h \
- /usr/include/c++/12.2.0/bits/ranges_util.h \
  /usr/include/c++/12.2.0/pstl/glue_algorithm_defs.h \
  /usr/include/c++/12.2.0/pstl/execution_defs.h

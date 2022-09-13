@@ -1,7 +1,6 @@
 src/CMakeFiles/demo_rpg.dir/statblock.cpp.o: \
- /home/orka/Projects/demorpg/DemoRPG/src/statblock.cpp \
- /usr/include/stdc-predef.h \
- /home/orka/Projects/demorpg/DemoRPG/include/statblock.h \
+ /home/orka/Projects/demorpg/src/statblock.cpp /usr/include/stdc-predef.h \
+ /home/orka/Projects/demorpg/include/statblock.h \
  /usr/include/c++/12.2.0/cstdint \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/os_defines.h \

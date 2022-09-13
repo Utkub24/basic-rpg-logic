@@ -201,16 +201,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=demo_rpg
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=1.12.1
+CMAKE_PROJECT_VERSION:STATIC=1.11.0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=12
+CMAKE_PROJECT_VERSION_MINOR:STATIC=11
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=1
+CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -308,7 +308,7 @@ demo_rpg_BINARY_DIR:STATIC=/home/orka/Projects/demorpg/build
 demo_rpg_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-demo_rpg_SOURCE_DIR:STATIC=/home/orka/Projects/demorpg/DemoRPG
+demo_rpg_SOURCE_DIR:STATIC=/home/orka/Projects/demorpg
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/orka/Projects/demorpg/build/_deps/googletest-build/googlemock
@@ -452,7 +452,7 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/orka/Projects/demorpg/DemoRPG
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/orka/Projects/demorpg
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR

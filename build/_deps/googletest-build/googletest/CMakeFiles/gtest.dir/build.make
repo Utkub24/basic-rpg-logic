@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/orka/Projects/demorpg/DemoRPG
+CMAKE_SOURCE_DIR = /home/orka/Projects/demorpg
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/orka/Projects/demorpg/build
@@ -70,7 +70,7 @@ include _deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make
 include _deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make
 
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make
-_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/src/gtest-all.cc
+_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: _deps/googletest-src/googletest/src/gtest-all.cc
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
 	cd /home/orka/Projects/demorpg/build/_deps/googletest-build/googletest && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o -MF CMakeFiles/gtest.dir/src/gtest-all.cc.o.d -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/src/gtest-all.cc
@@ -106,6 +106,6 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean
 
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend:
-	cd /home/orka/Projects/demorpg/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orka/Projects/demorpg/DemoRPG /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest /home/orka/Projects/demorpg/build /home/orka/Projects/demorpg/build/_deps/googletest-build/googletest /home/orka/Projects/demorpg/build/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/orka/Projects/demorpg/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/orka/Projects/demorpg /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest /home/orka/Projects/demorpg/build /home/orka/Projects/demorpg/build/_deps/googletest-build/googletest /home/orka/Projects/demorpg/build/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 
