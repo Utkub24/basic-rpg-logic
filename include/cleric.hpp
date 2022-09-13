@@ -32,9 +32,10 @@ class Cleric : public Class {
             }
         }
         ~Cleric() override {}
-    private:
+
         BASESTATS(16, 5, 5, 2);
         static const uint16_t BASEMP = 16;
+    private:
         PointPool MP;
 };
 
