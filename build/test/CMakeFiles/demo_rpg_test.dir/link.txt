@@ -1,1 +1,1 @@
-/usr/bin/g++ -g CMakeFiles/demo_rpg_test.dir/test.cpp.o -o demo_rpg_test  ../lib/libgtest_main.a -ldemorpg ../lib/libgtest.a 
+/usr/bin/g++ -g CMakeFiles/demo_rpg_test.dir/test.cpp.o -o demo_rpg_test  ../lib/libgtest_main.a ../src/libdemo_rpg.a ../lib/libgtest.a 

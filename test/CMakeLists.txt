@@ -7,7 +7,7 @@ add_executable(${This} ${SOURCES})
 
 target_link_libraries(${This} PUBLIC
     gtest_main
-    demorpg
+    demo_rpg
 )
 
 add_test(

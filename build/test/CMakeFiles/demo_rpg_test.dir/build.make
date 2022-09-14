@@ -93,6 +93,7 @@ demo_rpg_test_EXTERNAL_OBJECTS =
 test/demo_rpg_test: test/CMakeFiles/demo_rpg_test.dir/test.cpp.o
 test/demo_rpg_test: test/CMakeFiles/demo_rpg_test.dir/build.make
 test/demo_rpg_test: lib/libgtest_main.a
+test/demo_rpg_test: src/libdemo_rpg.a
 test/demo_rpg_test: lib/libgtest.a
 test/demo_rpg_test: test/CMakeFiles/demo_rpg_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable demo_rpg_test"

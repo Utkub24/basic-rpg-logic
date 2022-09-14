@@ -53,6 +53,9 @@
 			[
 				{
 					"fragment" : "-g"
+				},
+				{
+					"fragment" : "-std=gnu++14"
 				}
 			],
 			"includes" : 
@@ -69,6 +72,14 @@
 				}
 			],
 			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "14"
+			},
 			"sourceIndexes" : 
 			[
 				0
@@ -77,6 +88,10 @@
 	],
 	"dependencies" : 
 	[
+		{
+			"backtrace" : 2,
+			"id" : "demo_rpg::@145eef247bfb46b6828c"
+		},
 		{
 			"backtrace" : 2,
 			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
@@ -106,7 +121,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-ldemorpg",
+				"fragment" : "../src/libdemo_rpg.a",
 				"role" : "libraries"
 			},
 			{

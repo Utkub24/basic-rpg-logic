@@ -191,6 +191,7 @@ src/CMakeFiles/demo_rpg.dir/clean:
 # Target rules for target test/CMakeFiles/demo_rpg_test.dir
 
 # All Build rule for target.
+test/CMakeFiles/demo_rpg_test.dir/all: src/CMakeFiles/demo_rpg.dir/all
 test/CMakeFiles/demo_rpg_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 test/CMakeFiles/demo_rpg_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/demo_rpg_test.dir/build.make test/CMakeFiles/demo_rpg_test.dir/depend
@@ -200,7 +201,7 @@ test/CMakeFiles/demo_rpg_test.dir/all: _deps/googletest-build/googletest/CMakeFi
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/demo_rpg_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/demo_rpg_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/demo_rpg_test.dir/rule

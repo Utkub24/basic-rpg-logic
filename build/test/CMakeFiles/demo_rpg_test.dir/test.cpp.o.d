@@ -9,7 +9,6 @@ test/CMakeFiles/demo_rpg_test.dir/test.cpp.o: \
  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
- /usr/include/c++/12.2.0/pstl/pstl_config.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/stddef.h \
  /usr/include/c++/12.2.0/limits /usr/include/c++/12.2.0/memory \
  /usr/include/c++/12.2.0/bits/stl_algobase.h \
@@ -99,8 +98,6 @@ test/CMakeFiles/demo_rpg_test.dir/test.cpp.o: \
  /usr/include/c++/12.2.0/bits/atomic_base.h \
  /usr/include/c++/12.2.0/bits/atomic_lockfree_defines.h \
  /usr/include/c++/12.2.0/backward/auto_ptr.h \
- /usr/include/c++/12.2.0/pstl/glue_memory_defs.h \
- /usr/include/c++/12.2.0/pstl/execution_defs.h \
  /usr/include/c++/12.2.0/ostream /usr/include/c++/12.2.0/ios \
  /usr/include/c++/12.2.0/bits/char_traits.h \
  /usr/include/c++/12.2.0/cstdint /usr/include/c++/12.2.0/bits/localefwd.h \
@@ -115,8 +112,6 @@ test/CMakeFiles/demo_rpg_test.dir/test.cpp.o: \
  /usr/include/c++/12.2.0/bits/range_access.h \
  /usr/include/c++/12.2.0/initializer_list \
  /usr/include/c++/12.2.0/bits/basic_string.h \
- /usr/include/c++/12.2.0/string_view \
- /usr/include/c++/12.2.0/bits/string_view.tcc \
  /usr/include/c++/12.2.0/ext/string_conversions.h \
  /usr/include/c++/12.2.0/cstdlib /usr/include/stdlib.h \
  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
@@ -191,9 +186,6 @@ test/CMakeFiles/demo_rpg_test.dir/test.cpp.o: \
  /usr/include/c++/12.2.0/bits/parse_numbers.h \
  /usr/include/c++/12.2.0/bits/std_mutex.h \
  /usr/include/c++/12.2.0/bits/unique_lock.h /usr/include/c++/12.2.0/mutex \
- /usr/include/c++/12.2.0/any /usr/include/c++/12.2.0/optional \
- /usr/include/c++/12.2.0/bits/enable_special_members.h \
- /usr/include/c++/12.2.0/variant \
  /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
  /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
  /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
@@ -201,16 +193,6 @@ test/CMakeFiles/demo_rpg_test.dir/test.cpp.o: \
  /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
  /usr/include/c++/12.2.0/functional \
  /usr/include/c++/12.2.0/bits/std_function.h \
- /usr/include/c++/12.2.0/unordered_map \
- /usr/include/c++/12.2.0/bits/hashtable.h \
- /usr/include/c++/12.2.0/bits/hashtable_policy.h \
- /usr/include/c++/12.2.0/bits/node_handle.h \
- /usr/include/c++/12.2.0/bits/unordered_map.h \
- /usr/include/c++/12.2.0/bits/erase_if.h /usr/include/c++/12.2.0/array \
- /usr/include/c++/12.2.0/compare /usr/include/c++/12.2.0/bits/stl_algo.h \
- /usr/include/c++/12.2.0/bits/algorithmfwd.h \
- /usr/include/c++/12.2.0/bits/stl_heap.h \
- /usr/include/c++/12.2.0/bits/uniform_int_dist.h \
  /usr/include/c++/12.2.0/utility \
  /usr/include/c++/12.2.0/bits/stl_relops.h \
  /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
@@ -232,7 +214,8 @@ test/CMakeFiles/demo_rpg_test.dir/test.cpp.o: \
  /usr/include/c++/12.2.0/bits/quoted_string.h /usr/include/c++/12.2.0/map \
  /usr/include/c++/12.2.0/bits/stl_tree.h \
  /usr/include/c++/12.2.0/bits/stl_map.h \
- /usr/include/c++/12.2.0/bits/stl_multimap.h /usr/include/c++/12.2.0/set \
+ /usr/include/c++/12.2.0/bits/stl_multimap.h \
+ /usr/include/c++/12.2.0/bits/erase_if.h /usr/include/c++/12.2.0/set \
  /usr/include/c++/12.2.0/bits/stl_set.h \
  /usr/include/c++/12.2.0/bits/stl_multiset.h \
  /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
@@ -261,4 +244,7 @@ test/CMakeFiles/demo_rpg_test.dir/test.cpp.o: \
  /home/orka/Projects/demorpg/test/../include/effect.h \
  /home/orka/Projects/demorpg/test/../include/item.h \
  /usr/include/c++/12.2.0/algorithm \
- /usr/include/c++/12.2.0/pstl/glue_algorithm_defs.h
+ /usr/include/c++/12.2.0/bits/stl_algo.h \
+ /usr/include/c++/12.2.0/bits/algorithmfwd.h \
+ /usr/include/c++/12.2.0/bits/stl_heap.h \
+ /usr/include/c++/12.2.0/bits/uniform_int_dist.h

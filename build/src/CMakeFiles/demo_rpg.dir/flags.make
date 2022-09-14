@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/orka/Projects/demorpg/include
 
-CXX_FLAGS = -g
+CXX_FLAGS = -g -std=gnu++14
 

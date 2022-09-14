@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest
 
-CXX_FLAGS = -g
+CXX_FLAGS = -g -std=gnu++14
 

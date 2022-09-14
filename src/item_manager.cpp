@@ -77,3 +77,8 @@ bool ItemManager::MoveToInventory(Item* item_to_move, PlayerCharacter* p_char) {
         p_char->Inventory.push_back(item_to_move);
         return true;
     }
+
+void ItemManager::DeleteItem(Item*& item_to_delete) {
+    delete item_to_delete;
+    item_to_delete = nullptr;
+}

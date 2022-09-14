@@ -72,7 +72,7 @@ class Weapon final : public EquipmentDelegate {
         friend class ItemManager;
 };
 
-class Item {
+class Item final {
     public:
         const ItemDelegate* getData() const;
         ~Item();

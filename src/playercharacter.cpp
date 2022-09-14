@@ -1,4 +1,5 @@
 #include "playercharacter.h"
+#include "item_manager.h"
 
 PlayerCharacter::PlayerCharacter(Class* a_class)
     : playerClass(a_class), playerLevel(new LevelSystem()) {
@@ -13,10 +14,10 @@ PlayerCharacter::~PlayerCharacter() {
     playerLevel = nullptr;
 
     for(int i = 0; i < (int)ARMORSLOT::NUM_SLOTS; i++) {
-        if(Armors[i]) { delete Armors[i]; Armors[i] = nullptr; }
+        if(Armors[i]) { ItemManager::DeleteItem(Armors[i]); }
     }
     for(int i = 0; i < 2; i++) {
-        if(Weapons[i]) { delete Weapons[i]; Weapons[i] = nullptr; }
+        if(Weapons[i]) { ItemManager::DeleteItem(Weapons[i]); }
     }
 }
 
@@ -70,6 +71,6 @@ const std::vector<Item*> PlayerCharacter::getInventory() const { return Inventor
 void PlayerCharacter::cleanInventory() {
     const auto to_remove = std::stable_partition(Inventory.begin(), Inventory.end(),
         [](const Item* i) -> bool { return !i->isMarkedForDeletion(); });
-    std::for_each(to_remove, Inventory.end(), [](Item* i) { delete i; });
+    std::for_each(to_remove, Inventory.end(), [](Item* i) { ItemManager::DeleteItem(i); });
     Inventory.erase(to_remove, Inventory.end()); 
 }
