@@ -10,23 +10,25 @@ class PlayerCharacter {
         PlayerCharacter(Class* a_class);
         ~PlayerCharacter();
 
-        const uint16_t getMaxHp() const;
-        const uint16_t getCurrentHp() const;
-        const uint16_t getCurrentLevel() const;
-        const uint32_t getCurrentExp() const;
-        const uint32_t getExpForNextLevel() const;
+        [[nodiscard]] const uint16_t getMaxHp() const noexcept;
+        [[nodiscard]] const uint16_t getCurrentHp() const noexcept;
+        [[nodiscard]] const uint16_t getCurrentLevel() const noexcept;
+        [[nodiscard]] const uint32_t getCurrentExp() const noexcept;
+        [[nodiscard]] const uint32_t getExpForNextLevel() const noexcept;
 
         void gainExp(uint32_t i_exp);
         void checkLevel();
 
         void applyEffect(Effect* e);
 
-        const Armor* getEquippedArmorAt(unsigned long long i) const;
-        const Weapon* getEquippedWeaponAt(unsigned long long i) const;
+        [[nodiscard]] const Armor* getEquippedArmorAt(unsigned long long i) const noexcept;
+        [[nodiscard]] const Weapon* getEquippedWeaponAt(unsigned long long i) const noexcept;
 
-        const Class* getClass() const;
-        const std::vector<Effect> getEffects() const;
-        const std::vector<Item*> getInventory() const;
+        [[nodiscard]] const Class* getClass() const noexcept;
+        [[nodiscard]] const std::vector<Effect> getEffects() const noexcept;
+        [[nodiscard]] const std::vector<Item*> getInventory() const noexcept;
+
+        [[nodiscard]] const uint16_t getAttackVal() const noexcept;
     
     private:
         Class* playerClass;

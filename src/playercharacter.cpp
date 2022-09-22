@@ -1,5 +1,6 @@
 #include "playercharacter.h"
 #include "item_manager.h"
+#include "random.h"
 
 PlayerCharacter::PlayerCharacter(Class* a_class)
     : playerClass(a_class), playerLevel(new LevelSystem()) {
@@ -21,11 +22,11 @@ PlayerCharacter::~PlayerCharacter() {
     }
 }
 
-const uint16_t PlayerCharacter::getMaxHp() const { return playerClass->HP.getMax(); }
-const uint16_t PlayerCharacter::getCurrentHp()  const { return playerClass->HP.getCurrent(); }
-const uint16_t PlayerCharacter::getCurrentLevel() const { return playerLevel->get(); }
-const uint32_t PlayerCharacter::getCurrentExp() const { return playerLevel->getCurrentExp(); }
-const uint32_t PlayerCharacter::getExpForNextLevel() const { return playerLevel->getExpForNextLevel(); }
+const uint16_t PlayerCharacter::getMaxHp() const noexcept { return playerClass->HP.getMax(); }
+const uint16_t PlayerCharacter::getCurrentHp()  const noexcept { return playerClass->HP.getCurrent(); }
+const uint16_t PlayerCharacter::getCurrentLevel() const noexcept { return playerLevel->get(); }
+const uint32_t PlayerCharacter::getCurrentExp() const noexcept { return playerLevel->getCurrentExp(); }
+const uint32_t PlayerCharacter::getExpForNextLevel() const noexcept { return playerLevel->getExpForNextLevel(); }
 void PlayerCharacter::gainExp(uint32_t i_exp ) { 
     playerLevel->gainExp(i_exp);
     checkLevel();
@@ -53,20 +54,45 @@ void PlayerCharacter::applyEffect(Effect* e) {
 
 
 
-const Armor* PlayerCharacter::getEquippedArmorAt(unsigned long long i) const {
+const Armor* PlayerCharacter::getEquippedArmorAt(unsigned long long i) const noexcept {
     if(!Armors[i]) return nullptr;
     return dynamic_cast<const Armor*>(Armors[i]->getData());
 }
-const Weapon* PlayerCharacter::getEquippedWeaponAt(unsigned long long i) const {
+const Weapon* PlayerCharacter::getEquippedWeaponAt(unsigned long long i) const noexcept {
     if(!Weapons[i]) return nullptr;
     return dynamic_cast<const Weapon*>(Weapons[i]->getData());
 }
 
 // Either use a normal ptr to access stats directly
 // or use a unique ptr and make getters for stats
-const Class* PlayerCharacter::getClass() const { return playerClass; }
-const std::vector<Effect> PlayerCharacter::getEffects() const { return Effects; }
-const std::vector<Item*> PlayerCharacter::getInventory() const { return Inventory; }
+const Class* PlayerCharacter::getClass() const noexcept { return playerClass; }
+const std::vector<Effect> PlayerCharacter::getEffects() const noexcept { return Effects; }
+const std::vector<Item*> PlayerCharacter::getInventory() const noexcept { return Inventory; }
+
+const uint16_t PlayerCharacter::getAttackVal() const noexcept {
+    uint16_t tmp_dmg_done;
+
+    const Weapon* equipped_weapon = getEquippedWeaponAt((unsigned long long)WEAPONSLOT::ONEHAND);
+    if(equipped_weapon) {
+        tmp_dmg_done = Random::NTK(equipped_weapon->minDmg, equipped_weapon->maxDmg);
+    } else {
+        tmp_dmg_done = Random::NTK(1, 4); // unarmed attack
+    }
+
+    // add 1/4 of the weapon's scaling stat
+    uint16_t tmp_dmg_modifier;
+    switch(equipped_weapon->type) {
+        case WEAPONTYPE::MAGIC:
+            tmp_dmg_modifier = playerClass->Int/4.f;
+        case WEAPONTYPE::MELEE:
+            tmp_dmg_modifier = playerClass->Str/4.f;
+        case WEAPONTYPE::RANGED:
+            tmp_dmg_modifier = playerClass->Dex/4.f;
+    }
+
+    tmp_dmg_done += tmp_dmg_modifier;
+    return tmp_dmg_done;
+}
 
 void PlayerCharacter::cleanInventory() {
     const auto to_remove = std::stable_partition(Inventory.begin(), Inventory.end(),

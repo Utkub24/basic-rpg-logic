@@ -6,6 +6,11 @@ const uint16_t Cleric::BASEINT = 5;
 const uint16_t Cleric::BASEDEX = 2;
 const uint16_t Cleric::BASEMP = 16;
 
+const std::map<std::string, Ability> Cleric::ClericAbilities {
+     {"Heal", Ability("Heal", 10, 4, 6, ABILITYTYPE::HEAL, ABILITYTARGET::ALLY, ABILITYSCALER::INT)},
+     {"Smite", Ability("Smite", 6, 3, 5, ABILITYTYPE::TRUEDMG, ABILITYTARGET::ENEMY, ABILITYSCALER::STR)},
+     {"Heal Self", Ability("Heal Self", 10, 4, 6, ABILITYTYPE::HEAL, ABILITYTARGET::SELF, ABILITYSCALER::INT)}
+};
 
 Cleric::Cleric() {
     SETHPANDSTATS;
