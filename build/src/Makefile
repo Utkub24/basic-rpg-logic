@@ -377,6 +377,30 @@ levelsystem.cpp.s:
 	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/levelsystem.cpp.s
 .PHONY : levelsystem.cpp.s
 
+monster.o: monster.cpp.o
+.PHONY : monster.o
+
+# target to build an object file
+monster.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/monster.cpp.o
+.PHONY : monster.cpp.o
+
+monster.i: monster.cpp.i
+.PHONY : monster.i
+
+# target to preprocess a source file
+monster.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/monster.cpp.i
+.PHONY : monster.cpp.i
+
+monster.s: monster.cpp.s
+.PHONY : monster.s
+
+# target to generate assembly for a file
+monster.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/monster.cpp.s
+.PHONY : monster.cpp.s
+
 playercharacter.o: playercharacter.cpp.o
 .PHONY : playercharacter.o
 
@@ -424,6 +448,30 @@ pointpool.s: pointpool.cpp.s
 pointpool.cpp.s:
 	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/pointpool.cpp.s
 .PHONY : pointpool.cpp.s
+
+random.o: random.cpp.o
+.PHONY : random.o
+
+# target to build an object file
+random.cpp.o:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/random.cpp.o
+.PHONY : random.cpp.o
+
+random.i: random.cpp.i
+.PHONY : random.i
+
+# target to preprocess a source file
+random.cpp.i:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/random.cpp.i
+.PHONY : random.cpp.i
+
+random.s: random.cpp.s
+.PHONY : random.s
+
+# target to generate assembly for a file
+random.cpp.s:
+	cd /home/orka/Projects/demorpg/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/random.cpp.s
+.PHONY : random.cpp.s
 
 statblock.o: statblock.cpp.o
 .PHONY : statblock.o
@@ -487,12 +535,18 @@ help:
 	@echo "... levelsystem.o"
 	@echo "... levelsystem.i"
 	@echo "... levelsystem.s"
+	@echo "... monster.o"
+	@echo "... monster.i"
+	@echo "... monster.s"
 	@echo "... playercharacter.o"
 	@echo "... playercharacter.i"
 	@echo "... playercharacter.s"
 	@echo "... pointpool.o"
 	@echo "... pointpool.i"
 	@echo "... pointpool.s"
+	@echo "... random.o"
+	@echo "... random.i"
+	@echo "... random.s"
 	@echo "... statblock.o"
 	@echo "... statblock.i"
 	@echo "... statblock.s"

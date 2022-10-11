@@ -12,6 +12,8 @@ set(SOURCE
     item_manager.cpp
     playercharacter.cpp
     class.cpp
+    monster.cpp
+    random.cpp
 )
 
 add_library(demo_rpg ${SOURCE})

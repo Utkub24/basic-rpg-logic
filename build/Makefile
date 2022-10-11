@@ -198,6 +198,19 @@ demo_rpg_test/fast:
 .PHONY : demo_rpg_test/fast
 
 #=============================================================================
+# Target rules for targets named demo_rpg_game
+
+# Build rule for target.
+demo_rpg_game: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_rpg_game
+.PHONY : demo_rpg_game
+
+# fast build rule for target.
+demo_rpg_game/fast:
+	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/demo_rpg_game.dir/build.make game/CMakeFiles/demo_rpg_game.dir/build
+.PHONY : demo_rpg_game/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -263,6 +276,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... demo_rpg"
+	@echo "... demo_rpg_game"
 	@echo "... demo_rpg_test"
 	@echo "... gmock"
 	@echo "... gmock_main"

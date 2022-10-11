@@ -223,6 +223,34 @@ src/CMakeFiles/demo_rpg.dir/class.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/class.cpp.s"
 	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/class.cpp -o CMakeFiles/demo_rpg.dir/class.cpp.s
 
+src/CMakeFiles/demo_rpg.dir/monster.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
+src/CMakeFiles/demo_rpg.dir/monster.cpp.o: /home/orka/Projects/demorpg/src/monster.cpp
+src/CMakeFiles/demo_rpg.dir/monster.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/demo_rpg.dir/monster.cpp.o"
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/monster.cpp.o -MF CMakeFiles/demo_rpg.dir/monster.cpp.o.d -o CMakeFiles/demo_rpg.dir/monster.cpp.o -c /home/orka/Projects/demorpg/src/monster.cpp
+
+src/CMakeFiles/demo_rpg.dir/monster.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/monster.cpp.i"
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/monster.cpp > CMakeFiles/demo_rpg.dir/monster.cpp.i
+
+src/CMakeFiles/demo_rpg.dir/monster.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/monster.cpp.s"
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/monster.cpp -o CMakeFiles/demo_rpg.dir/monster.cpp.s
+
+src/CMakeFiles/demo_rpg.dir/random.cpp.o: src/CMakeFiles/demo_rpg.dir/flags.make
+src/CMakeFiles/demo_rpg.dir/random.cpp.o: /home/orka/Projects/demorpg/src/random.cpp
+src/CMakeFiles/demo_rpg.dir/random.cpp.o: src/CMakeFiles/demo_rpg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/demo_rpg.dir/random.cpp.o"
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/demo_rpg.dir/random.cpp.o -MF CMakeFiles/demo_rpg.dir/random.cpp.o.d -o CMakeFiles/demo_rpg.dir/random.cpp.o -c /home/orka/Projects/demorpg/src/random.cpp
+
+src/CMakeFiles/demo_rpg.dir/random.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_rpg.dir/random.cpp.i"
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/orka/Projects/demorpg/src/random.cpp > CMakeFiles/demo_rpg.dir/random.cpp.i
+
+src/CMakeFiles/demo_rpg.dir/random.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_rpg.dir/random.cpp.s"
+	cd /home/orka/Projects/demorpg/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/orka/Projects/demorpg/src/random.cpp -o CMakeFiles/demo_rpg.dir/random.cpp.s
+
 # Object files for target demo_rpg
 demo_rpg_OBJECTS = \
 "CMakeFiles/demo_rpg.dir/demorpg.cpp.o" \
@@ -235,7 +263,9 @@ demo_rpg_OBJECTS = \
 "CMakeFiles/demo_rpg.dir/item.cpp.o" \
 "CMakeFiles/demo_rpg.dir/item_manager.cpp.o" \
 "CMakeFiles/demo_rpg.dir/playercharacter.cpp.o" \
-"CMakeFiles/demo_rpg.dir/class.cpp.o"
+"CMakeFiles/demo_rpg.dir/class.cpp.o" \
+"CMakeFiles/demo_rpg.dir/monster.cpp.o" \
+"CMakeFiles/demo_rpg.dir/random.cpp.o"
 
 # External object files for target demo_rpg
 demo_rpg_EXTERNAL_OBJECTS =
@@ -251,9 +281,11 @@ src/libdemo_rpg.a: src/CMakeFiles/demo_rpg.dir/item.cpp.o
 src/libdemo_rpg.a: src/CMakeFiles/demo_rpg.dir/item_manager.cpp.o
 src/libdemo_rpg.a: src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o
 src/libdemo_rpg.a: src/CMakeFiles/demo_rpg.dir/class.cpp.o
+src/libdemo_rpg.a: src/CMakeFiles/demo_rpg.dir/monster.cpp.o
+src/libdemo_rpg.a: src/CMakeFiles/demo_rpg.dir/random.cpp.o
 src/libdemo_rpg.a: src/CMakeFiles/demo_rpg.dir/build.make
 src/libdemo_rpg.a: src/CMakeFiles/demo_rpg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX static library libdemo_rpg.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX static library libdemo_rpg.a"
 	cd /home/orka/Projects/demorpg/build/src && $(CMAKE_COMMAND) -P CMakeFiles/demo_rpg.dir/cmake_clean_target.cmake
 	cd /home/orka/Projects/demorpg/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_rpg.dir/link.txt --verbose=$(VERBOSE)
 

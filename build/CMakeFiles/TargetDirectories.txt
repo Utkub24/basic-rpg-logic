@@ -21,6 +21,14 @@
 /home/orka/Projects/demorpg/build/test/CMakeFiles/install.dir
 /home/orka/Projects/demorpg/build/test/CMakeFiles/install/local.dir
 /home/orka/Projects/demorpg/build/test/CMakeFiles/install/strip.dir
+/home/orka/Projects/demorpg/build/game/CMakeFiles/demo_rpg_game.dir
+/home/orka/Projects/demorpg/build/game/CMakeFiles/test.dir
+/home/orka/Projects/demorpg/build/game/CMakeFiles/edit_cache.dir
+/home/orka/Projects/demorpg/build/game/CMakeFiles/rebuild_cache.dir
+/home/orka/Projects/demorpg/build/game/CMakeFiles/list_install_components.dir
+/home/orka/Projects/demorpg/build/game/CMakeFiles/install.dir
+/home/orka/Projects/demorpg/build/game/CMakeFiles/install/local.dir
+/home/orka/Projects/demorpg/build/game/CMakeFiles/install/strip.dir
 /home/orka/Projects/demorpg/build/_deps/googletest-build/CMakeFiles/test.dir
 /home/orka/Projects/demorpg/build/_deps/googletest-build/CMakeFiles/edit_cache.dir
 /home/orka/Projects/demorpg/build/_deps/googletest-build/CMakeFiles/rebuild_cache.dir

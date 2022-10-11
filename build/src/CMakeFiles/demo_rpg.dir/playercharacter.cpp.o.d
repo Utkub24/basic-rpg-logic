@@ -112,4 +112,6 @@ src/CMakeFiles/demo_rpg.dir/playercharacter.cpp.o: \
  /usr/include/c++/12.2.0/bits/algorithmfwd.h \
  /usr/include/c++/12.2.0/bits/stl_heap.h \
  /usr/include/c++/12.2.0/bits/stl_tempbuf.h \
- /usr/include/c++/12.2.0/bits/uniform_int_dist.h
+ /usr/include/c++/12.2.0/bits/uniform_int_dist.h \
+ /home/orka/Projects/demorpg/include/item_manager.h \
+ /home/orka/Projects/demorpg/include/random.h

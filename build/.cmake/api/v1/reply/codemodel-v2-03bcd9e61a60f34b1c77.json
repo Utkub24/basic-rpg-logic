@@ -10,7 +10,8 @@
 					[
 						1,
 						2,
-						3
+						3,
+						4
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
@@ -48,6 +49,21 @@
 					"source" : "test",
 					"targetIndexes" : 
 					[
+						2
+					]
+				},
+				{
+					"build" : "game",
+					"jsonFile" : "directory-game-Debug-293cc40f9d53d7bf6169.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "game",
+					"targetIndexes" : 
+					[
 						1
 					]
 				},
@@ -55,7 +71,7 @@
 					"build" : "_deps/googletest-build",
 					"childIndexes" : 
 					[
-						4
+						5
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-_deps.googletest-build-Debug-325181791364522dc3de.json",
@@ -71,38 +87,38 @@
 					"build" : "_deps/googletest-build/googlemock",
 					"childIndexes" : 
 					[
-						5
+						6
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-0484be2e416a365ea28f.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.5"
-					},
-					"parentIndex" : 3,
-					"projectIndex" : 2,
-					"source" : "build/_deps/googletest-src/googlemock",
-					"targetIndexes" : 
-					[
-						2,
-						3
-					]
-				},
-				{
-					"build" : "_deps/googletest-build/googletest",
-					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-bc48aa45d640362a7992.json",
+					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-1eec6404443aa207c7ce.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
 					},
 					"parentIndex" : 4,
+					"projectIndex" : 2,
+					"source" : "build/_deps/googletest-src/googlemock",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "_deps/googletest-build/googletest",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.googletest-build.googletest-Debug-0647288201191aa74956.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 5,
 					"projectIndex" : 3,
 					"source" : "build/_deps/googletest-src/googletest",
 					"targetIndexes" : 
 					[
-						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -118,13 +134,15 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					],
 					"name" : "demo_rpg",
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				},
 				{
@@ -134,7 +152,7 @@
 					],
 					"directoryIndexes" : 
 					[
-						3
+						4
 					],
 					"name" : "googletest-distribution",
 					"parentIndex" : 0
@@ -146,27 +164,27 @@
 					],
 					"directoryIndexes" : 
 					[
-						4
+						5
 					],
 					"name" : "gmock",
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						2,
-						3
+						3,
+						4
 					]
 				},
 				{
 					"directoryIndexes" : 
 					[
-						5
+						6
 					],
 					"name" : "gtest",
 					"parentIndex" : 2,
 					"targetIndexes" : 
 					[
-						4,
-						5
+						5,
+						6
 					]
 				}
 			],
@@ -175,8 +193,15 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "demo_rpg::@145eef247bfb46b6828c",
-					"jsonFile" : "target-demo_rpg-Debug-bb016dcaa579659e965a.json",
+					"jsonFile" : "target-demo_rpg-Debug-099c73cb42e36b81874a.json",
 					"name" : "demo_rpg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "demo_rpg_game::@0c53ff3c4131f9152fd3",
+					"jsonFile" : "target-demo_rpg_game-Debug-c3e0102887818c067abe.json",
+					"name" : "demo_rpg_game",
 					"projectIndex" : 0
 				},
 				{
@@ -187,28 +212,28 @@
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 4,
+					"directoryIndex" : 5,
 					"id" : "gmock::@0f7bb11d64f3678238c7",
 					"jsonFile" : "target-gmock-Debug-ff391ef04a180efd00fd.json",
 					"name" : "gmock",
 					"projectIndex" : 2
 				},
 				{
-					"directoryIndex" : 4,
+					"directoryIndex" : 5,
 					"id" : "gmock_main::@0f7bb11d64f3678238c7",
 					"jsonFile" : "target-gmock_main-Debug-f67a271f9a5eb9297429.json",
 					"name" : "gmock_main",
 					"projectIndex" : 2
 				},
 				{
-					"directoryIndex" : 5,
+					"directoryIndex" : 6,
 					"id" : "gtest::@1ea2dfc0605fe3ab2a3f",
 					"jsonFile" : "target-gtest-Debug-b3666d1082482c4282f1.json",
 					"name" : "gtest",
 					"projectIndex" : 3
 				},
 				{
-					"directoryIndex" : 5,
+					"directoryIndex" : 6,
 					"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f",
 					"jsonFile" : "target-gtest_main-Debug-91b9f133baf54164b26b.json",
 					"name" : "gtest_main",

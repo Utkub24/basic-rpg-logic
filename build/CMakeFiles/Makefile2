@@ -65,18 +65,21 @@ CMAKE_BINARY_DIR = /home/orka/Projects/demorpg/build
 # The main recursive "all" target.
 all: src/all
 all: test/all
+all: game/all
 all: _deps/googletest-build/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/preinstall
 preinstall: test/preinstall
+preinstall: game/preinstall
 preinstall: _deps/googletest-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: src/clean
 clean: test/clean
+clean: game/clean
 clean: _deps/googletest-build/clean
 .PHONY : clean
 
@@ -132,6 +135,21 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 .PHONY : _deps/googletest-build/googletest/clean
 
 #=============================================================================
+# Directory level rules for directory game
+
+# Recursive "all" directory target.
+game/all: game/CMakeFiles/demo_rpg_game.dir/all
+.PHONY : game/all
+
+# Recursive "preinstall" directory target.
+game/preinstall:
+.PHONY : game/preinstall
+
+# Recursive "clean" directory target.
+game/clean: game/CMakeFiles/demo_rpg_game.dir/clean
+.PHONY : game/clean
+
+#=============================================================================
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
@@ -168,12 +186,12 @@ test/clean: test/CMakeFiles/demo_rpg_test.dir/clean
 src/CMakeFiles/demo_rpg.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target demo_rpg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target demo_rpg"
 .PHONY : src/CMakeFiles/demo_rpg.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/demo_rpg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/demo_rpg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/demo_rpg.dir/rule
@@ -196,12 +214,12 @@ test/CMakeFiles/demo_rpg_test.dir/all: _deps/googletest-build/googletest/CMakeFi
 test/CMakeFiles/demo_rpg_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/demo_rpg_test.dir/build.make test/CMakeFiles/demo_rpg_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/demo_rpg_test.dir/build.make test/CMakeFiles/demo_rpg_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=13,14 "Built target demo_rpg_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=17,18 "Built target demo_rpg_test"
 .PHONY : test/CMakeFiles/demo_rpg_test.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/demo_rpg_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/demo_rpg_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 0
 .PHONY : test/CMakeFiles/demo_rpg_test.dir/rule
@@ -216,13 +234,39 @@ test/CMakeFiles/demo_rpg_test.dir/clean:
 .PHONY : test/CMakeFiles/demo_rpg_test.dir/clean
 
 #=============================================================================
+# Target rules for target game/CMakeFiles/demo_rpg_game.dir
+
+# All Build rule for target.
+game/CMakeFiles/demo_rpg_game.dir/all: src/CMakeFiles/demo_rpg.dir/all
+	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/demo_rpg_game.dir/build.make game/CMakeFiles/demo_rpg_game.dir/depend
+	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/demo_rpg_game.dir/build.make game/CMakeFiles/demo_rpg_game.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=15,16 "Built target demo_rpg_game"
+.PHONY : game/CMakeFiles/demo_rpg_game.dir/all
+
+# Build rule for subdir invocation for target.
+game/CMakeFiles/demo_rpg_game.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 16
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 game/CMakeFiles/demo_rpg_game.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/orka/Projects/demorpg/build/CMakeFiles 0
+.PHONY : game/CMakeFiles/demo_rpg_game.dir/rule
+
+# Convenience name for target.
+demo_rpg_game: game/CMakeFiles/demo_rpg_game.dir/rule
+.PHONY : demo_rpg_game
+
+# clean rule for target.
+game/CMakeFiles/demo_rpg_game.dir/clean:
+	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/demo_rpg_game.dir/build.make game/CMakeFiles/demo_rpg_game.dir/clean
+.PHONY : game/CMakeFiles/demo_rpg_game.dir/clean
+
+#=============================================================================
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
 
 # All Build rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=15,16 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=19,20 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -249,7 +293,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=17,18 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=21,22 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -275,7 +319,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=19,20 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=23,24 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -301,7 +345,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=21,22 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/orka/Projects/demorpg/build/CMakeFiles --progress-num=25,26 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

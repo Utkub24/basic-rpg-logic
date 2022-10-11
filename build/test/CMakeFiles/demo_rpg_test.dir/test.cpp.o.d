@@ -247,4 +247,6 @@ test/CMakeFiles/demo_rpg_test.dir/test.cpp.o: \
  /usr/include/c++/12.2.0/bits/stl_algo.h \
  /usr/include/c++/12.2.0/bits/algorithmfwd.h \
  /usr/include/c++/12.2.0/bits/stl_heap.h \
- /usr/include/c++/12.2.0/bits/uniform_int_dist.h
+ /usr/include/c++/12.2.0/bits/uniform_int_dist.h \
+ /home/orka/Projects/demorpg/test/../include/item_manager.h \
+ /home/orka/Projects/demorpg/test/../include/monster.h

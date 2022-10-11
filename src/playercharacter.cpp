@@ -94,6 +94,10 @@ const uint16_t PlayerCharacter::getAttackVal() const noexcept {
     return tmp_dmg_done;
 }
 
+void PlayerCharacter::reduceHp(uint16_t i_hp) noexcept { playerClass->HP.reduce(i_hp); }
+void PlayerCharacter::increaseHp(uint16_t i_hp) noexcept { playerClass->HP.increase(i_hp); }
+
+
 void PlayerCharacter::cleanInventory() {
     const auto to_remove = std::stable_partition(Inventory.begin(), Inventory.end(),
         [](const Item* i) -> bool { return !i->isMarkedForDeletion(); });

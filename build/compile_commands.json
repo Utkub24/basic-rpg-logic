@@ -55,9 +55,24 @@
   "file": "/home/orka/Projects/demorpg/src/class.cpp"
 },
 {
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/include -g -std=gnu++14 -o CMakeFiles/demo_rpg.dir/monster.cpp.o -c /home/orka/Projects/demorpg/src/monster.cpp",
+  "file": "/home/orka/Projects/demorpg/src/monster.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/src",
+  "command": "/usr/bin/g++  -I/home/orka/Projects/demorpg/include -g -std=gnu++14 -o CMakeFiles/demo_rpg.dir/random.cpp.o -c /home/orka/Projects/demorpg/src/random.cpp",
+  "file": "/home/orka/Projects/demorpg/src/random.cpp"
+},
+{
   "directory": "/home/orka/Projects/demorpg/build/test",
   "command": "/usr/bin/g++  -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest/include -isystem /home/orka/Projects/demorpg/build/_deps/googletest-src/googletest -g -std=gnu++14 -o CMakeFiles/demo_rpg_test.dir/test.cpp.o -c /home/orka/Projects/demorpg/test/test.cpp",
   "file": "/home/orka/Projects/demorpg/test/test.cpp"
+},
+{
+  "directory": "/home/orka/Projects/demorpg/build/game",
+  "command": "/usr/bin/g++   -g -std=gnu++14 -o CMakeFiles/demo_rpg_game.dir/main.cpp.o -c /home/orka/Projects/demorpg/game/main.cpp",
+  "file": "/home/orka/Projects/demorpg/game/main.cpp"
 },
 {
   "directory": "/home/orka/Projects/demorpg/build/_deps/googletest-build/googlemock",

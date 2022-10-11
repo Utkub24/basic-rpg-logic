@@ -20,6 +20,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/googletest-src/googletest/cmake/gtest.pc.in"
   "_deps/googletest-src/googletest/cmake/gtest_main.pc.in"
   "_deps/googletest-src/googletest/cmake/internal_utils.cmake"
+  "/home/orka/Projects/demorpg/game/CMakeLists.txt"
   "/home/orka/Projects/demorpg/src/CMakeLists.txt"
   "/home/orka/Projects/demorpg/test/CMakeLists.txt"
   "/usr/share/cmake/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
@@ -69,6 +70,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "game/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/googletest-build/googletest/generated/gmock.pc"
   "_deps/googletest-build/googletest/generated/gmock_main.pc"
@@ -84,6 +86,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/demo_rpg.dir/DependInfo.cmake"
   "test/CMakeFiles/demo_rpg_test.dir/DependInfo.cmake"
+  "game/CMakeFiles/demo_rpg_game.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"

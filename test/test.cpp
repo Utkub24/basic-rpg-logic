@@ -2,6 +2,7 @@
 #include "../include/cleric.h"
 #include "../include/playercharacter.h"
 #include "../include/item_manager.h"
+#include "../include/monster.h"
 
 /*TEST(ExampleTest, Guide) {
     EXPECT_TRUE(true); 
@@ -11,7 +12,7 @@
 
 class PlayerTest : public ::testing::Test {
     protected:
-        PlayerCharacter player = PlayerCharacter(new Cleric()); // gets rebuilt in each test
+        PlayerCharacter player{new Cleric()}; // gets rebuilt in each test
         virtual void SetUp() override {}
         virtual void TearDown() override {}
 };
@@ -32,6 +33,18 @@ class ItemTest : public ::testing::Test {
         friend class PlayerTest;
 };
 
+class MonsterTest : public ::testing::Test {
+    protected:
+        Monster* monki = new Monster(10, 2, 4);
+
+};
+
+class SimpleBattleTest : public ::testing::Test {
+    protected:
+        PlayerCharacter p1{new Cleric()};
+        Monster mon1{10, 2, 4};
+        
+};
 
 // Don't bother with this shit rn
 
@@ -76,4 +89,46 @@ TEST_F(PlayerTest, leveling) {
 
 TEST_F(PlayerTest, items) {
 
+}
+
+TEST_F(MonsterTest, creation) {
+    ASSERT_EQ(10, monki->HP.getMax());
+    ASSERT_EQ(10, monki->HP.getCurrent());
+    ASSERT_EQ(2, monki->getMinDamage());
+    ASSERT_EQ(4, monki->getMaxDamage());
+
+}
+
+TEST_F(MonsterTest, RANDOMNESS) {
+    int damage_val = 0;
+    for(int i = 0; i++; i < 100) {
+        damage_val = monki->getAttackVal();
+        ASSERT_TRUE((damage_val <= monki->getMaxDamage()) && (damage_val >= monki->getMinDamage()));
+
+    }
+}
+
+TEST_F(MonsterTest, HP_MANIPULATION) {
+    monki->HP.reduce(5);
+    ASSERT_EQ(monki->HP.getMax() - 5, monki->HP.getCurrent());
+
+    monki->HP.increase(5);
+    ASSERT_EQ(monki->HP.getMax(), monki->HP.getCurrent());
+
+    monki->HP.reduce(monki->HP.getMax() + 1);
+    ASSERT_EQ(0, monki->HP.getCurrent());
+    
+    monki->HP.increase(monki->HP.getMax() + 1);
+    ASSERT_EQ(monki->HP.getMax(), monki->HP.getCurrent());
+}
+
+TEST_F(SimpleBattleTest, DUMB_FIGHT) {
+    ItemManager::Equip(ItemManager::CreateWeapon("Bronze Mace", StatBlock(), 3, 6, WEAPONSLOT::ONEHAND, WEAPONTYPE::MELEE), &p1);
+
+    while((mon1.HP.getCurrent() > 0) && (p1.getCurrentHp() > 0)) {
+        mon1.HP.reduce(p1.getAttackVal());
+        p1.reduceHp(mon1.getAttackVal());
+    }
+
+    ASSERT_EQ(mon1.HP.getCurrent(), 0);
 }

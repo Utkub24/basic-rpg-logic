@@ -99,6 +99,9 @@
 			"path" : "test/CMakeLists.txt"
 		},
 		{
+			"path" : "game/CMakeLists.txt"
+		},
+		{
 			"isGenerated" : true,
 			"path" : "build/_deps/googletest-src/CMakeLists.txt"
 		},
