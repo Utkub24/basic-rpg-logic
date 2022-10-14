@@ -1563,7 +1563,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.7()]"
+			"value" : "[/usr/bin/python3.10][cfound components: Interpreter ][v3.10.8()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_Threads",
