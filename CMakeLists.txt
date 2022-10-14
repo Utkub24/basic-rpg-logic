@@ -6,9 +6,9 @@ set(This demo_rpg)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_subdirectory(src)
-add_subdirectory(test)
-add_subdirectory(game)
+add_subdirectory(demorpg_lib)
+add_subdirectory(demorpg_test)
+add_subdirectory(demorpg_game)
 
 enable_testing()
 include(FetchContent)

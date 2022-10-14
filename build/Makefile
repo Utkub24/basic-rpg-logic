@@ -172,17 +172,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named demo_rpg
+# Target rules for targets named demo_rpg_lib
 
 # Build rule for target.
-demo_rpg: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_rpg
-.PHONY : demo_rpg
+demo_rpg_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_rpg_lib
+.PHONY : demo_rpg_lib
 
 # fast build rule for target.
-demo_rpg/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/demo_rpg.dir/build.make src/CMakeFiles/demo_rpg.dir/build
-.PHONY : demo_rpg/fast
+demo_rpg_lib/fast:
+	$(MAKE) $(MAKESILENT) -f demorpg_lib/src/CMakeFiles/demo_rpg_lib.dir/build.make demorpg_lib/src/CMakeFiles/demo_rpg_lib.dir/build
+.PHONY : demo_rpg_lib/fast
 
 #=============================================================================
 # Target rules for targets named demo_rpg_test
@@ -194,7 +194,7 @@ demo_rpg_test: cmake_check_build_system
 
 # fast build rule for target.
 demo_rpg_test/fast:
-	$(MAKE) $(MAKESILENT) -f test/CMakeFiles/demo_rpg_test.dir/build.make test/CMakeFiles/demo_rpg_test.dir/build
+	$(MAKE) $(MAKESILENT) -f demorpg_test/CMakeFiles/demo_rpg_test.dir/build.make demorpg_test/CMakeFiles/demo_rpg_test.dir/build
 .PHONY : demo_rpg_test/fast
 
 #=============================================================================
@@ -207,7 +207,7 @@ demo_rpg_game: cmake_check_build_system
 
 # fast build rule for target.
 demo_rpg_game/fast:
-	$(MAKE) $(MAKESILENT) -f game/CMakeFiles/demo_rpg_game.dir/build.make game/CMakeFiles/demo_rpg_game.dir/build
+	$(MAKE) $(MAKESILENT) -f demorpg_game/CMakeFiles/demo_rpg_game.dir/build.make demorpg_game/CMakeFiles/demo_rpg_game.dir/build
 .PHONY : demo_rpg_game/fast
 
 #=============================================================================
@@ -275,8 +275,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... demo_rpg"
 	@echo "... demo_rpg_game"
+	@echo "... demo_rpg_lib"
 	@echo "... demo_rpg_test"
 	@echo "... gmock"
 	@echo "... gmock_main"

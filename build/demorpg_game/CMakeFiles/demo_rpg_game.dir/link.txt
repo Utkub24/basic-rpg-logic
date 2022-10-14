@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/demo_rpg_game.dir/main.cpp.o -o demo_rpg_game  ../demorpg_lib/src/libdemo_rpg_lib.a 

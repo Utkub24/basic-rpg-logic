@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdemo_rpg.a CMakeFiles/demo_rpg.dir/demorpg.cpp.o CMakeFiles/demo_rpg.dir/ability.cpp.o CMakeFiles/demo_rpg.dir/pointpool.cpp.o CMakeFiles/demo_rpg.dir/statblock.cpp.o CMakeFiles/demo_rpg.dir/levelsystem.cpp.o CMakeFiles/demo_rpg.dir/cleric.cpp.o CMakeFiles/demo_rpg.dir/effect.cpp.o CMakeFiles/demo_rpg.dir/item.cpp.o CMakeFiles/demo_rpg.dir/item_manager.cpp.o CMakeFiles/demo_rpg.dir/playercharacter.cpp.o CMakeFiles/demo_rpg.dir/class.cpp.o CMakeFiles/demo_rpg.dir/monster.cpp.o CMakeFiles/demo_rpg.dir/random.cpp.o
+/usr/bin/ranlib libdemo_rpg.a

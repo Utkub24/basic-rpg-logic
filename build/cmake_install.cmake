@@ -44,17 +44,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/orka/Projects/demorpg/build/src/cmake_install.cmake")
+  include("/home/orka/Projects/demorpg/build/demorpg_lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/orka/Projects/demorpg/build/test/cmake_install.cmake")
+  include("/home/orka/Projects/demorpg/build/demorpg_test/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/orka/Projects/demorpg/build/game/cmake_install.cmake")
+  include("/home/orka/Projects/demorpg/build/demorpg_game/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
