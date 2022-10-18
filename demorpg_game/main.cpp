@@ -1,49 +1,49 @@
 #include <iostream>
-#include "../demorpg_lib/include/playercharacter.h"
+#include "main.h"
+#include "../demorpg_lib/include/cleric.h"
+#include "../demorpg_lib/include/random.h"
 
-char the_map[12][13] = {
-    "############",
-    "#----------#",
-    "#----------#",
-    "#----------#",
-    "#----------#",
-    "#----------#",
-    "#----------#",
-    "#----------#",
-    "#----------#",
-    "#----------#",
-    "#----------#",
-    "############",
-};
+Player* guy = nullptr;
+Enemy* enemi = nullptr;
 
-struct Player {
-    Player() = delete;
-    //Player(PlayerCharacter* player)
-    //    : player(player) {}
-        
-    PlayerCharacter player;
-    int xpos = 3;
-    int ypos = 3;
-    int prev_xpos = 3;
-    int prev_ypos = 3;
-} mister;
 
-void UpdatePlayerPos() {
-    if(((mister.xpos == mister.prev_xpos) && (mister.ypos = mister.prev_ypos)))
+void EnterFight(Player& fightingPlayer) {
+    if(!enemi)
+        return;
+
+    while(fightingPlayer.player->isAlive() && enemi->isAlive()) {
+        system("clear");
+        std::cout << "P          vs          M\n";
+        printf("HP:  %d/%d               %d/%d\n",fightingPlayer.player->getCurrentHp(), fightingPlayer.player->getMaxHp(), enemi->monster.HP.getCurrent(), enemi->monster.HP.getMax());
+        //if(MP)
+        printf("HP:  %d/%d               %d/%d\n",fightingPlayer.player->getCurrentHp(), fightingPlayer.player->getMaxHp(), enemi->monster.HP.getCurrent(), enemi->monster.HP.getMax());
+
+    }
+
+}
+
+void UpdatePlayerPos(Player& player) {
+    if(player.xpos == player.prev_xpos && player.ypos == player.prev_ypos)
         return;
 
     // if not wall
-    if(the_map[mister.xpos][mister.ypos] != '#') {
-        // draw player
-        the_map[mister.xpos][mister.ypos] = '@';
-        the_map[mister.prev_xpos][mister.prev_ypos] = '-';
+    switch(the_map[player.xpos][player.ypos]) {
+        case '#':
+            player.xpos = player.prev_xpos;
+            player.ypos = player.prev_ypos;
+            break;
+        case 'M':
+            EnterFight(player);
+            break;
+        default:
+            // draw player
+            the_map[player.xpos][player.ypos] = '@';
+            the_map[player.prev_xpos][player.prev_ypos] = '-';
+            // update current location to be previous before next update
+            player.prev_xpos = player.xpos;
+            player.prev_ypos = player.ypos;
+            break;
 
-        // update current location to be previous before next update
-        mister.prev_xpos = mister.xpos;
-        mister.prev_ypos = mister.ypos;
-    } else {
-        mister.xpos = mister.prev_xpos;
-        mister.ypos = mister.prev_ypos;
     }
 }
 
@@ -61,32 +61,38 @@ void ShowMap() {
 
 int main(int argc, char** argv) {
     bool running = true;
+    guy = new Player(new PlayerCharacter(new Cleric()));
+    the_map[guy->xpos][guy->ypos] = '@';
 
-    std::cout << "\n press enter\n";
+    enemi = new Enemy(Random::NTK(4, 6), 2, 4);
+    enemi->setPos(5, 10);
+    the_map[enemi->xpos][enemi->ypos] = 'M';
+
+    ShowMap();
+
     while(running) {
         char c = getchar();
 
         switch(c) {
             case 'w':
-                mister.xpos--;
+                guy->xpos--;
                 break;
             case 'a':
-                mister.ypos--;
+                guy->ypos--;
                 break;
             case 's':
-                mister.xpos++;
+                guy->xpos++;
                 break;
             case 'd':
-                mister.ypos++;
+                guy->ypos++;
                 break;
 
             default:
                 break;
         }
-        
-        UpdatePlayerPos();
+        std::cin.clear();
+        UpdatePlayerPos(*guy);
         ShowMap();
-    
     }
 
     return 0;

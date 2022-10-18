@@ -180,8 +180,82 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: /home/orka/Projects/demorp
   /usr/include/c++/12.2.0/bits/basic_ios.tcc \
   /usr/include/c++/12.2.0/bits/ostream.tcc \
   /usr/include/c++/12.2.0/istream \
-  /usr/include/c++/12.2.0/bits/istream.tcc
+  /usr/include/c++/12.2.0/bits/istream.tcc \
+  /home/orka/Projects/demorpg/demorpg_game/main.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/playercharacter.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/class.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/pointpool.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/statblock.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/levelsystem.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/ability.h \
+  /usr/include/c++/12.2.0/vector \
+  /usr/include/c++/12.2.0/bits/stl_uninitialized.h \
+  /usr/include/c++/12.2.0/bits/stl_vector.h \
+  /usr/include/c++/12.2.0/bits/stl_bvector.h \
+  /usr/include/c++/12.2.0/bits/vector.tcc \
+  /home/orka/Projects/demorpg/demorpg_lib/include/effect.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/item.h \
+  /usr/include/c++/12.2.0/algorithm \
+  /usr/include/c++/12.2.0/bits/stl_algo.h \
+  /usr/include/c++/12.2.0/bits/algorithmfwd.h \
+  /usr/include/c++/12.2.0/bits/stl_heap.h \
+  /usr/include/c++/12.2.0/bits/stl_tempbuf.h \
+  /usr/include/c++/12.2.0/bits/uniform_int_dist.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/monster.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/cleric.h \
+  /usr/include/c++/12.2.0/map \
+  /usr/include/c++/12.2.0/bits/stl_tree.h \
+  /usr/include/c++/12.2.0/ext/aligned_buffer.h \
+  /usr/include/c++/12.2.0/bits/stl_map.h \
+  /usr/include/c++/12.2.0/tuple \
+  /usr/include/c++/12.2.0/bits/uses_allocator.h \
+  /usr/include/c++/12.2.0/bits/stl_multimap.h \
+  /usr/include/c++/12.2.0/bits/erase_if.h \
+  /home/orka/Projects/demorpg/demorpg_lib/include/macros.hpp \
+  /home/orka/Projects/demorpg/demorpg_lib/include/random.h
 
+
+/usr/include/c++/12.2.0/bits/erase_if.h:
+
+/usr/include/c++/12.2.0/bits/stl_multimap.h:
+
+/usr/include/c++/12.2.0/tuple:
+
+/usr/include/c++/12.2.0/bits/uses_allocator.h:
+
+/usr/include/c++/12.2.0/bits/stl_map.h:
+
+/usr/include/c++/12.2.0/ext/aligned_buffer.h:
+
+/usr/include/c++/12.2.0/map:
+
+/usr/include/c++/12.2.0/bits/uniform_int_dist.h:
+
+/usr/include/c++/12.2.0/bits/stl_heap.h:
+
+/usr/include/c++/12.2.0/bits/algorithmfwd.h:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/item.h:
+
+/usr/include/c++/12.2.0/algorithm:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/effect.h:
+
+/usr/include/c++/12.2.0/bits/vector.tcc:
+
+/usr/include/c++/12.2.0/bits/stl_bvector.h:
+
+/usr/include/c++/12.2.0/bits/stl_uninitialized.h:
+
+/usr/include/c++/12.2.0/vector:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/ability.h:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/levelsystem.h:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/class.h:
+
+/home/orka/Projects/demorpg/demorpg_game/main.h:
 
 /usr/include/c++/12.2.0/bits/istream.tcc:
 
@@ -194,6 +268,8 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: /home/orka/Projects/demorp
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
 /usr/include/c++/12.2.0/bits/streambuf_iterator.h:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/playercharacter.h:
 
 /usr/include/c++/12.2.0/streambuf:
 
@@ -244,6 +320,8 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: /home/orka/Projects/demorp
 /usr/include/sys/types.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/c++/12.2.0/bits/stl_tree.h:
 
 /usr/include/c++/12.2.0/cstdlib:
 
@@ -303,6 +381,10 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: /home/orka/Projects/demorp
 
 /usr/include/bits/types.h:
 
+/usr/include/c++/12.2.0/bits/stl_vector.h:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/pointpool.h:
+
 /usr/include/c++/12.2.0/exception:
 
 /usr/include/bits/types/__locale_t.h:
@@ -339,6 +421,8 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: /home/orka/Projects/demorp
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/os_defines.h:
 
+/home/orka/Projects/demorpg/demorpg_lib/include/random.h:
+
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++config.h:
 
 /usr/include/c++/12.2.0/bits/stl_iterator_base_funcs.h:
@@ -346,6 +430,8 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: /home/orka/Projects/demorp
 /usr/include/c++/12.2.0/bits/exception_ptr.h:
 
 /usr/include/sys/cdefs.h:
+
+/usr/include/c++/12.2.0/bits/stl_tempbuf.h:
 
 /usr/include/bits/endian.h:
 
@@ -485,13 +571,19 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: /home/orka/Projects/demorp
 
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
+/home/orka/Projects/demorpg/demorpg_lib/include/macros.hpp:
+
 /usr/include/bits/types/cookie_io_functions_t.h:
 
 /usr/include/c++/12.2.0/bits/invoke.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
 
+/usr/include/c++/12.2.0/bits/stl_algo.h:
+
 /usr/include/sys/single_threaded.h:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/monster.h:
 
 /usr/include/c++/12.2.0/ext/type_traits.h:
 
@@ -512,6 +604,8 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: /home/orka/Projects/demorp
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
 /usr/include/c++/12.2.0/bits/new_allocator.h:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/statblock.h:
 
 /usr/include/c++/12.2.0/bits/basic_ios.h:
 
@@ -534,6 +628,8 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: /home/orka/Projects/demorp
 /usr/include/c++/12.2.0/debug/debug.h:
 
 /usr/include/c++/12.2.0/bits/predefined_ops.h:
+
+/home/orka/Projects/demorpg/demorpg_lib/include/cleric.h:
 
 /usr/include/c++/12.2.0/initializer_list:
 

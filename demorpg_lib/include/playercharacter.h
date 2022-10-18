@@ -29,6 +29,7 @@ class PlayerCharacter {
         [[nodiscard]] const std::vector<Item*> getInventory() const noexcept;
 
         [[nodiscard]] const uint16_t getAttackVal() const noexcept;
+        [[nodiscard]] const bool isAlive() const  noexcept;
 
         void reduceHp(uint16_t i_hp) noexcept;
         void increaseHp(uint16_t i_hp) noexcept;

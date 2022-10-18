@@ -94,6 +94,8 @@ const uint16_t PlayerCharacter::getAttackVal() const noexcept {
     return tmp_dmg_done;
 }
 
+const bool PlayerCharacter::isAlive() const noexcept { return getCurrentHp() > 0; }
+
 void PlayerCharacter::reduceHp(uint16_t i_hp) noexcept { playerClass->HP.reduce(i_hp); }
 void PlayerCharacter::increaseHp(uint16_t i_hp) noexcept { playerClass->HP.increase(i_hp); }
 
