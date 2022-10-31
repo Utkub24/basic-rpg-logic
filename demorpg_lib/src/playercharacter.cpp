@@ -75,22 +75,27 @@ const uint16_t PlayerCharacter::getAttackVal() const noexcept {
     const Weapon* equipped_weapon = getEquippedWeaponAt((unsigned long long)WEAPONSLOT::ONEHAND);
     if(equipped_weapon) {
         tmp_dmg_done = Random::NTK(equipped_weapon->minDmg, equipped_weapon->maxDmg);
+        // add 1/4 of the weapon's scaling stat
+        uint16_t tmp_dmg_modifier;
+        switch(equipped_weapon->type) {
+            case WEAPONTYPE::MAGIC:
+                tmp_dmg_modifier = playerClass->Int/4.f;
+                break;
+            case WEAPONTYPE::MELEE:
+                tmp_dmg_modifier = playerClass->Str/4.f;
+                break;
+            case WEAPONTYPE::RANGED:
+                tmp_dmg_modifier = playerClass->Dex/4.f;
+                break;
+            default:
+                tmp_dmg_modifier = 0;
+                break;
+        }
+        tmp_dmg_done += tmp_dmg_modifier;
     } else {
         tmp_dmg_done = Random::NTK(1, 4); // unarmed attack
     }
 
-    // add 1/4 of the weapon's scaling stat
-    uint16_t tmp_dmg_modifier;
-    switch(equipped_weapon->type) {
-        case WEAPONTYPE::MAGIC:
-            tmp_dmg_modifier = playerClass->Int/4.f;
-        case WEAPONTYPE::MELEE:
-            tmp_dmg_modifier = playerClass->Str/4.f;
-        case WEAPONTYPE::RANGED:
-            tmp_dmg_modifier = playerClass->Dex/4.f;
-    }
-
-    tmp_dmg_done += tmp_dmg_modifier;
     return tmp_dmg_done;
 }
 

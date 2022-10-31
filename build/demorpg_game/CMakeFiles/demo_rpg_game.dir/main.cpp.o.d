@@ -158,4 +158,5 @@ demorpg_game/CMakeFiles/demo_rpg_game.dir/main.cpp.o: \
  /usr/include/c++/12.2.0/bits/stl_multimap.h \
  /usr/include/c++/12.2.0/bits/erase_if.h \
  /home/orka/Projects/demorpg/demorpg_game/../demorpg_lib/include/macros.hpp \
- /home/orka/Projects/demorpg/demorpg_game/../demorpg_lib/include/random.h
+ /home/orka/Projects/demorpg/demorpg_game/../demorpg_lib/include/random.h \
+ /home/orka/Projects/demorpg/demorpg_game/../demorpg_lib/include/item_manager.h
