@@ -4,30 +4,33 @@
 #include "../demorpg_lib/include/random.h"
 #include "../demorpg_lib/include/item.h"
 #include "../demorpg_lib/include/item_manager.h"
+#include <algorithm>
 
 Player* guy = nullptr;
 Enemy* enemi = nullptr;
 
-Item* DropRandomItem(const Player* base_calc) {
+Item* DropRandomItem() {
     int drop_seed = Random::NTK(1, 100);
+    Item* dropped_item = nullptr;
     if(drop_seed < 51) {
-        ItemManager::CreatePotion("Healing Potion", new Effect(), 1);
+        dropped_item = HPPOT; 
     } else {
         switch(Random::NTK(1,2)) {
             case 1:
-                ItemManager::CreateArmor("Iron Helm", StatBlock(2, 0, 0, 3, 2), ARMORSLOT::HELMET);
+                dropped_item = ItemManager::CreateArmor("Iron Helm", StatBlock(2, 0, 0, 3, 2), ARMORSLOT::HELMET);
                 break;
             case 2:
-                ItemManager::CreateWeapon("Bronze Sword", StatBlock(), 3, 8, WEAPONSLOT::ONEHAND, WEAPONTYPE::MELEE);
+                dropped_item = ItemManager::CreateWeapon("Bronze Sword", StatBlock(), 3, 8, WEAPONSLOT::ONEHAND, WEAPONTYPE::MELEE);
                 break;
         }
     }
-
+    
+    return dropped_item;
 }
 
 void CreateMonster(Enemy* in_out, const Player* base_calc) {
     if(!base_calc) return;
-    if(in_out) { delete in_out; in_out == nullptr;}
+    if(in_out) { delete in_out; in_out = nullptr;}
 
     int min_hp = base_calc->player->getCurrentLevel() * 2;
     int max_hp = base_calc->player->getCurrentLevel() * 8;
@@ -52,6 +55,8 @@ void CreateMonster(Enemy* in_out, const Player* base_calc) {
 
 void EnterFight(Player& fightingPlayer) {
     if(!enemi) return;
+    std::vector<Item*> playerInv = fightingPlayer.player->getInventory();
+    std::vector<Item*>::iterator hp_pot_it = std::find(playerInv.begin(), playerInv.end(), HPPOT);
 
     while(fightingPlayer.player->isAlive() && enemi->isAlive()) {
         system("clear");
@@ -68,7 +73,11 @@ void EnterFight(Player& fightingPlayer) {
                 break;
             
             case 'h':
-                if(std::binary_search(fightingPlayer.player->getInventory().begin(), fightingPlayer.player->getInventory().end(), "Healing Potion")) {
+                if(hp_pot_it != playerInv.end()) {
+                  //use item from inventory and heal player
+                  fightingPlayer.player->increaseHp(6);
+                  playerInv.erase(hp_pot_it);
+
                 }
                 if(enemi->isAlive())
                     fightingPlayer.player->reduceHp(enemi->monster.getAttackVal());
@@ -82,15 +91,15 @@ void EnterFight(Player& fightingPlayer) {
     }
 
     if(fightingPlayer.player->isAlive()) {
-        Item* drop = DropRandomItem(&fightingPlayer);
+        Item* dropped_item = DropRandomItem();
 
         std::cout << "You defeated the monster!\n";
         std::cout << "EXP Gained: " << enemi->xp_worth << "\n";
         fightingPlayer.player->gainExp(enemi->xp_worth);
 
-        if(drop) {
-            ItemManager::MoveToInventory(drop, fightingPlayer.player);
-            std::cout << "Item recieved: " << drop->getData()->name << std::endl;
+        if(dropped_item) {
+            ItemManager::MoveToInventory(dropped_item, fightingPlayer.player);
+            std::cout << "Item recieved: " << dropped_item->getData()->name << std::endl;
         }
 
         the_map[enemi->xpos][enemi->ypos] = '-';

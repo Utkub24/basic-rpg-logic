@@ -11,5 +11,5 @@ class ItemManager {
         static bool Use(Item* item_to_use, PlayerCharacter* p_char);
         static bool MoveToInventory(Item* item_to_move, PlayerCharacter* p_char);
         static void DeleteItem(Item*& item_to_delete);
-        
 };
+static Item* HPPOT = ItemManager::CreatePotion("Healing Potion", new Effect(), 1);

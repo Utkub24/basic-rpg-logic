@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/orka/Projects/demorpg/CMakeLists.txt"
-  "CMakeFiles/3.24.2/CMakeCCompiler.cmake"
-  "CMakeFiles/3.24.2/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.24.2/CMakeSystem.cmake"
+  "CMakeFiles/3.24.3/CMakeCCompiler.cmake"
+  "CMakeFiles/3.24.3/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.24.3/CMakeSystem.cmake"
   "_deps/googletest-src/CMakeLists.txt"
   "_deps/googletest-src/googlemock/CMakeLists.txt"
   "_deps/googletest-src/googlemock/cmake/gmock.pc.in"
