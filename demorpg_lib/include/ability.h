@@ -22,4 +22,5 @@ struct Ability {
     ABILITYTYPE abilityType;
     ABILITYTARGET target;
     ABILITYSCALER scaler;
+    bool on_cd = false;
 };

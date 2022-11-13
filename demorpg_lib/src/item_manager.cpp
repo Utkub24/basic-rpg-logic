@@ -82,3 +82,4 @@ void ItemManager::DeleteItem(Item*& item_to_delete) {
     delete item_to_delete;
     item_to_delete = nullptr;
 }
+

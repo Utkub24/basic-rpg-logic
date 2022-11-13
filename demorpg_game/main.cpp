@@ -50,12 +50,37 @@ void CreateMonster(Enemy* in_out, const Player* base_calc) {
     enemi = in_out;
 }
 
+void UseAbilityInFight(Player& fightingPlayer) {
+    std::vector<Ability> playerAbilities = fightingPlayer.player->getClass()->Abilities;
+    for(auto a : playerAbilities) std::cout << "Ability: " << a.name << std::endl;
+    std::cout << "Choose ability: ";
+    std::cin.clear();
+    std::cin.ignore(100, '\n');
+    int i;
+    std::cin >> i;
+    if(i < playerAbilities.size()) {
+        const Ability* chosen_ability = &playerAbilities.at(i);
+        switch(chosen_ability->target) {
+            case ABILITYTARGET::SELF:
+                // Assume a healing ability for now
+                fightingPlayer.player->increaseHp(chosen_ability->effectVal);
+                break;
+            case ABILITYTARGET::ENEMY:
+                if(enemi->isAlive()) enemi->monster.HP.reduce(chosen_ability->effectVal);
+                break;
+            default:
+                break;
+        }
+    } else return;
+   }
 
 
 
 void EnterFight(Player& fightingPlayer) {
+    int turn = 0;
     if(!enemi) return;
     std::vector<Item*> playerInv = fightingPlayer.player->getInventory();
+    std::vector<Ability> playerAbilites = fightingPlayer.player->getClass()->Abilities;
     std::vector<Item*>::iterator hp_pot_it = std::find(playerInv.begin(), playerInv.end(), HPPOT);
 
     while(fightingPlayer.player->isAlive() && enemi->isAlive()) {
@@ -63,13 +88,16 @@ void EnterFight(Player& fightingPlayer) {
         std::cout << "P          vs          M\n";
         printf("HP:  %d/%d               %d/%d\n",fightingPlayer.player->getCurrentHp(), fightingPlayer.player->getMaxHp(), enemi->monster.HP.getCurrent(), enemi->monster.HP.getMax());
         //if(MP)
-        std::cout << "\n\nChoose action (a: attack, h: heal)\n";
+        std::cout << "\n\nChoose action (a: attack, h: heal, A: ability)\n";
+        std::cin.clear();
+        std::cin.ignore(100, '\n');
         char action = getchar();
         switch(action) {
             case 'a':
                 enemi->monster.HP.reduce(fightingPlayer.player->getAttackVal());
                 if(enemi->isAlive())
                     fightingPlayer.player->reduceHp(enemi->monster.getAttackVal());
+                turn++;
                 break;
             
             case 'h':
@@ -81,13 +109,17 @@ void EnterFight(Player& fightingPlayer) {
                 }
                 if(enemi->isAlive())
                     fightingPlayer.player->reduceHp(enemi->monster.getAttackVal());
+                turn++;
+                break;
+            case 'A':
+                UseAbilityInFight(fightingPlayer);
+                turn++;
                 break;
 
             default:
                 //std::cout << "\nChoose a valid action!\n";
                 break;
         }
-
     }
 
     if(fightingPlayer.player->isAlive()) {
