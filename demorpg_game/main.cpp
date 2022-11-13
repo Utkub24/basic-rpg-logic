@@ -52,7 +52,9 @@ void CreateMonster(Enemy* in_out, const Player* base_calc) {
 
 void UseAbilityInFight(Player& fightingPlayer) {
     std::vector<Ability> playerAbilities = fightingPlayer.player->getClass()->Abilities;
-    for(auto a : playerAbilities) std::cout << "Ability: " << a.name << std::endl;
+    int l = 0;
+    std::cout << "Abilites\n";
+    for(auto a : playerAbilities) std::cout << l++ << ": " << a.name << std::endl;
     std::cout << "Choose ability: ";
     std::cin.clear();
     std::cin.ignore(100, '\n');
@@ -72,7 +74,14 @@ void UseAbilityInFight(Player& fightingPlayer) {
                 break;
         }
     } else return;
-   }
+}
+
+void ViewInventory(Player& fightingPlayer) {
+    std::cout << "----Inventory Contents----" << std::endl;
+    int l = 0;
+    for(auto i : fightingPlayer.player->getInventory()) std::cout << l++ << ") " << i->getData()->name << std::endl;
+    return;
+}
 
 
 
@@ -88,7 +97,7 @@ void EnterFight(Player& fightingPlayer) {
         std::cout << "P          vs          M\n";
         printf("HP:  %d/%d               %d/%d\n",fightingPlayer.player->getCurrentHp(), fightingPlayer.player->getMaxHp(), enemi->monster.HP.getCurrent(), enemi->monster.HP.getMax());
         //if(MP)
-        std::cout << "\n\nChoose action (a: attack, h: heal, A: ability)\n";
+        std::cout << "\n\nChoose action (a: Attack, h: Heal, A: Ability, i:  Inventory)\n";
         std::cin.clear();
         std::cin.ignore(100, '\n');
         char action = getchar();
@@ -115,6 +124,9 @@ void EnterFight(Player& fightingPlayer) {
                 UseAbilityInFight(fightingPlayer);
                 turn++;
                 break;
+            case 'i':
+                ViewInventory(fightingPlayer);
+                break;    
 
             default:
                 //std::cout << "\nChoose a valid action!\n";
