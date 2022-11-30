@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "24"
+			"value" : "25"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -103,7 +103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -1614,6 +1614,30 @@
 			"value" : "/usr/local"
 		},
 		{
+			"name" : "_Python_Compiler_REASON_FAILURE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Compiler reason failure"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "_Python_Development_REASON_FAILURE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Development reason failure"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
 			"name" : "_Python_EXECUTABLE",
 			"properties" : 
 			[
@@ -1648,6 +1672,30 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "b91b4035ecb3bb3f5760d35922531bcd"
+		},
+		{
+			"name" : "_Python_Interpreter_REASON_FAILURE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Interpreter reason failure"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "_Python_NumPy_REASON_FAILURE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "NumPy reason failure"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
 		},
 		{
 			"name" : "cmake_package_name",

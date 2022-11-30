@@ -379,9 +379,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/orka/Projects/demorpg/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=24
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=25
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -555,11 +555,19 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Compiler reason failure
+_Python_Compiler_REASON_FAILURE:INTERNAL=
+//Development reason failure
+_Python_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
 _Python_EXECUTABLE:INTERNAL=/usr/bin/python3.10
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;7;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3.10/site-packages;/usr/lib/python3.10/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=b91b4035ecb3bb3f5760d35922531bcd
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
+//NumPy reason failure
+_Python_NumPy_REASON_FAILURE:INTERNAL=
 cmake_package_name:INTERNAL=GTest
 generated_dir:INTERNAL=/home/orka/Projects/demorpg/build/_deps/googletest-build/googletest/generated
 //ADVANCED property for variable: gmock_build_tests

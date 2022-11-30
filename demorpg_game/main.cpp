@@ -4,7 +4,6 @@
 #include "../demorpg_lib/include/random.h"
 #include "../demorpg_lib/include/item.h"
 #include "../demorpg_lib/include/item_manager.h"
-#include <algorithm>
 
 Player* guy = nullptr;
 Enemy* enemi = nullptr;
@@ -53,7 +52,7 @@ void CreateMonster(Enemy* in_out, const Player* base_calc) {
 void UseAbilityInFight(Player& fightingPlayer) {
     std::vector<Ability> playerAbilities = fightingPlayer.player->getClass()->Abilities;
     int l = 0;
-    std::cout << "Abilites\n";
+    std::cout << "----Abilites----\n";
     for(auto a : playerAbilities) std::cout << l++ << ": " << a.name << std::endl;
     std::cout << "Choose ability: ";
     std::cin.clear();
@@ -80,13 +79,15 @@ void ViewInventory(Player& fightingPlayer) {
     std::cout << "----Inventory Contents----" << std::endl;
     int l = 0;
     for(auto i : fightingPlayer.player->getInventory()) std::cout << l++ << ") " << i->getData()->name << std::endl;
-    return;
+    std::cout << "(x to  exit)\n";
+    while (getchar() != 'x') {}
+   
 }
 
 
 
 void EnterFight(Player& fightingPlayer) {
-    int turn = 0;
+    int turn = 1;
     if(!enemi) return;
     std::vector<Item*> playerInv = fightingPlayer.player->getInventory();
     std::vector<Ability> playerAbilites = fightingPlayer.player->getClass()->Abilities;
@@ -96,6 +97,7 @@ void EnterFight(Player& fightingPlayer) {
         system("clear");
         std::cout << "P          vs          M\n";
         printf("HP:  %d/%d               %d/%d\n",fightingPlayer.player->getCurrentHp(), fightingPlayer.player->getMaxHp(), enemi->monster.HP.getCurrent(), enemi->monster.HP.getMax());
+        std::cout << "Turn: "<< turn << std::endl;
         //if(MP)
         std::cout << "\n\nChoose action (a: Attack, h: Heal, A: Ability, i:  Inventory)\n";
         std::cin.clear();
@@ -104,20 +106,17 @@ void EnterFight(Player& fightingPlayer) {
         switch(action) {
             case 'a':
                 enemi->monster.HP.reduce(fightingPlayer.player->getAttackVal());
-                if(enemi->isAlive())
-                    fightingPlayer.player->reduceHp(enemi->monster.getAttackVal());
+                if(enemi->isAlive()) fightingPlayer.player->reduceHp(enemi->monster.getAttackVal());
                 turn++;
                 break;
             
             case 'h':
                 if(hp_pot_it != playerInv.end()) {
-                  //use item from inventory and heal player
-                  fightingPlayer.player->increaseHp(6);
-                  playerInv.erase(hp_pot_it);
-
+                    //use item from inventory and heal player
+                    ItemManager::Use(*hp_pot_it, fightingPlayer.player);
+                    fightingPlayer.player->increaseHp(6);
+                    if(enemi->isAlive()) fightingPlayer.player->reduceHp(enemi->monster.getAttackVal());
                 }
-                if(enemi->isAlive())
-                    fightingPlayer.player->reduceHp(enemi->monster.getAttackVal());
                 turn++;
                 break;
             case 'A':
